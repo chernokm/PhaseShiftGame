@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: cde537bc7c182f6459dde187f615a91e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Ceilings1
+    100002: Columns
+    100004: Entry_Stairs
+    100006: Floors
+    100008: Fron_Doors
+    100010: Garden_Walls
+    100012: GuardianStatue
+    100014: Lab_Base
+    100016: Lab_Column
+    100018: Lab_Stairs
+    100020: Lab_Walls
+    100022: Person_Height_Reference
+    100024: Teleporter
+    100026: Teleporter_Base
+    100028: Temple_Backroom_Walls
+    100030: Temple_Entry_Floor
+    100032: Temple_MainRoom_Walls
+    100034: //RootNode
+    400000: Ceilings1
+    400002: Columns
+    400004: Entry_Stairs
+    400006: Floors
+    400008: Fron_Doors
+    400010: Garden_Walls
+    400012: GuardianStatue
+    400014: Lab_Base
+    400016: Lab_Column
+    400018: Lab_Stairs
+    400020: Lab_Walls
+    400022: Person_Height_Reference
+    400024: Teleporter
+    400026: Teleporter_Base
+    400028: Temple_Backroom_Walls
+    400030: Temple_Entry_Floor
+    400032: Temple_MainRoom_Walls
+    400034: //RootNode
+    2100000: lambert1
+    2300000: Ceilings1
+    2300002: Columns
+    2300004: Entry_Stairs
+    2300006: Floors
+    2300008: Fron_Doors
+    2300010: Garden_Walls
+    2300012: GuardianStatue
+    2300014: Lab_Base
+    2300016: Lab_Column
+    2300018: Lab_Stairs
+    2300020: Lab_Walls
+    2300022: Person_Height_Reference
+    2300024: Teleporter
+    2300026: Teleporter_Base
+    2300028: Temple_Backroom_Walls
+    2300030: Temple_Entry_Floor
+    2300032: Temple_MainRoom_Walls
+    3300000: Ceilings1
+    3300002: Columns
+    3300004: Entry_Stairs
+    3300006: Floors
+    3300008: Fron_Doors
+    3300010: Garden_Walls
+    3300012: GuardianStatue
+    3300014: Lab_Base
+    3300016: Lab_Column
+    3300018: Lab_Stairs
+    3300020: Lab_Walls
+    3300022: Person_Height_Reference
+    3300024: Teleporter
+    3300026: Teleporter_Base
+    3300028: Temple_Backroom_Walls
+    3300030: Temple_Entry_Floor
+    3300032: Temple_MainRoom_Walls
+    4300000: Person_Height_Reference
+    4300002: Temple_Entry_Floor
+    4300004: GuardianStatue
+    4300006: Lab_Base
+    4300008: Lab_Column
+    4300010: Entry_Stairs
+    4300012: Teleporter
+    4300014: Columns
+    4300016: Lab_Stairs
+    4300018: Lab_Walls
+    4300020: Floors
+    4300022: Teleporter_Base
+    4300024: Ceilings1
+    4300026: Garden_Walls
+    4300028: Temple_MainRoom_Walls
+    4300030: Temple_Backroom_Walls
+    4300032: Fron_Doors
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
