@@ -186,7 +186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -322, y: 0}
+  m_AnchoredPosition: {x: -322, y: 50}
   m_SizeDelta: {x: 633.5, y: 912}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &12950290879636110
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 12950291372082574}
   - component: {fileID: 12950291372082575}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: TextPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1033,7 +1033,7 @@ GameObject:
   - component: {fileID: 12950292466951505}
   - component: {fileID: 12950292466951518}
   m_Layer: 5
-  m_Name: Text
+  m_Name: IndicatorText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
