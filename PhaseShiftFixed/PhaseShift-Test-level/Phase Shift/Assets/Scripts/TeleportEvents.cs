@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TeleportEvents : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class TeleportEvents : MonoBehaviour
 
     public GameObject thePlayer;
 
+    public Text interactText;
+
+    public Image flash;
+    public AudioSource teleportSound;
+
     public bool teleportTriggerBool1 = false;
     public bool teleportTriggerBool2 = false;
     public bool teleportTriggerBool3 = false;
@@ -30,35 +36,83 @@ public class TeleportEvents : MonoBehaviour
     {
         if (gameObject == teleportTrigger1)
         {
+            interactText.text = "[ press F to Dimensional Travel ]";
             teleportTriggerBool1 = true;
         }
         else if (gameObject == teleportTrigger2)
         {
+            interactText.text = "[ press F to Dimensional Travel ]";
             teleportTriggerBool2 = true;
         }
         else if (gameObject == teleportTrigger3)
         {
+            interactText.text = "[ press F to Dimensional Travel ]";
             teleportTriggerBool3 = true;
         }
         else if (gameObject == teleportTrigger4)
         {
+            interactText.text = "[ press F to Dimensional Travel ]";
             teleportTriggerBool4 = true;
         }
         else if (gameObject == teleportTrigger5)
         {
+            interactText.text = "[ press F to Dimensional Travel ]";
             teleportTriggerBool5 = true;
         }
         else if (gameObject == teleportTrigger6)
         {
+            interactText.text = "[ press F to Dimensional Travel ]";
             teleportTriggerBool6 = true;
         }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        interactText.text = "";
     }
 
     void OnTriggerStay(Collider other)
     {
         if (Input.GetButtonDown("Interact"))
         {
-            Teleport();
+            //Teleport();
+
+            if (gameObject == teleportTrigger1)
+            {
+                teleportSound.Play();
+                StartCoroutine(Flash());
+                Teleport();
+            }
+            else if (gameObject == teleportTrigger2)
+            {
+                teleportSound.Play();
+                StartCoroutine(Flash());
+                Teleport();
+            }
+            else if (gameObject == teleportTrigger3)
+            {
+                teleportSound.Play();
+                StartCoroutine(Flash());
+                Teleport();
+            }
+            else if (gameObject == teleportTrigger4)
+            {
+                teleportSound.Play();
+                StartCoroutine(Flash());
+                Teleport();
+            }
+            else if (gameObject == teleportTrigger5)
+            {
+                teleportSound.Play();
+                StartCoroutine(Flash());
+                Teleport();
+            }
+            else if (gameObject == teleportTrigger6)
+            {
+                teleportSound.Play();
+                StartCoroutine(Flash());
+                Teleport();
+            }
         }
     }
 
@@ -94,5 +148,13 @@ public class TeleportEvents : MonoBehaviour
             thePlayer.transform.position = teleportTarget6.transform.position;
             teleportTriggerBool6 = false;
         }
+    }
+
+    public IEnumerator Flash()
+    {
+        // Enables the image "flash", waits 0.5 then disables it so teleport seems more natural
+        flash.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        flash.enabled = false;
     }
 }

@@ -6,14 +6,16 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     
-    public GameObject keycardAmount;
-    public static int KeycardAmount;
+    public GameObject MushroomAmount;
+    public GameObject KeycardAmount;
+    //public static int mushroomAmount;
 
 
     void Update()
     {
         // Updating the HUD
-        keycardAmount.GetComponent<Text>().text = "" + KeycardAmount;
+        MushroomAmount.GetComponent<Text>().text = "" + ItemEvents.mushroomAmount;
+        KeycardAmount.GetComponent<Text>().text = "" + ItemEvents.keycardAmount;
         
     }
     
