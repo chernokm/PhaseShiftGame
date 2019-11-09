@@ -58,7 +58,7 @@ public class ItemEvents : MonoBehaviour
         {
             if (mushroomAmount == 0 && talkedToGuardian == false)
             {
-                interactText.text = "Collect [ 5 ] mushrooms for me and I will give you the keycard you need to get out of here.";
+                interactText.text = "Collect [ 5 ] mushrooms for me and I will give you the keycard your Facility requires.";
                 talkedToGuardian = true;
                 Destroy(interiorDoor);
                 //obtainedGardenKeycard = true;
@@ -80,7 +80,7 @@ public class ItemEvents : MonoBehaviour
         {
             if (talkedToGuardian == false)
             {
-                interactText.text = "You need to talk to the Guardian first before entering my maze!";
+                interactText.text = "You need to talk to the Temple Guardian before you can enter the maze!";
             }
             else if (talkedToGuardian == true)
             {
