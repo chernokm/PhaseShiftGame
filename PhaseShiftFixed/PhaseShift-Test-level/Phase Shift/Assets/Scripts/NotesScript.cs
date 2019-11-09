@@ -17,41 +17,61 @@ public class NotesScript : MonoBehaviour
 	private Text crosshairs;
 
 	[SerializeField]
+	private Canvas clipboardCanvas;
+
+	[SerializeField]
 	private bool isClipboard1;
 
-	//private FirstPersonController fpsController;
+	private FirstPersonController fpsController;
 
 	private void Awake()
 	{
-		clipboardImage.enabled = false;
+		clipboardCanvas.enabled = false;
 		clipboardText.text = "";
-		//fpsController = FindObjectOfType<FirstPersonController>();
+		fpsController = FindObjectOfType<FirstPersonController>();
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
-		interactionText.text = "Press [F] to read note";
-	}
-
-	private void OnTriggerExit(Collider other)
-	{
-		clipboardImage.enabled = false;
-		clipboardText.text = "";
-		interactionText.text = "";
-		crosshairs.text = "( : )";
+		interactionText.text = "Press [F] to read";
 	}
 
 	private void OnTriggerStay(Collider other)
 	{
+		if (Input.GetButtonDown("Interact"))
+		{
+			OpenMenu();
+		}
+	}
+
+	private void OpenMenu()
+	{
+		if (isClipboard1 == true)
+		{
+			fpsController.enabled = false;
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
+			crosshairs.text = "";
+			interactionText.text = "";
+
+			clipboardCanvas.enabled = true;
+			clipboardImage.enabled = true;
+			clipboardText.text = "Test 019" + "\n" + "\n" + "The flora - specifically the mushrooms - collected from Dimension 255 contain an overwhelming amount of Zetamelaphin, useful for counteracting the negative effects of cross-dimensional Phase Shifts, however..." + "\n" + "\n" + "It's insanely toxic. Avoid contact with bare skin if at all possible.";
+		}
+	}
+
+	public void CloseMenu()
+	{
+		fpsController.enabled = true;
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
+
 		if(isClipboard1 == true)
 		{
-			if (Input.GetButtonDown("Interact"))
-			{
-				crosshairs.text = "";
-				interactionText.text = "";
-				clipboardImage.enabled = true;
-				clipboardText.text = "Scientific text goes here.";
-			}
+			clipboardCanvas.enabled = false;
+			clipboardText.text = "";
+			interactionText.text = "";
+			crosshairs.text = "( : )";
 		}
 	}
 }
