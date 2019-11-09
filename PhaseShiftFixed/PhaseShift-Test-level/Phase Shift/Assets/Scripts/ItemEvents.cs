@@ -5,22 +5,28 @@ using UnityEngine.UI;
 
 public class ItemEvents : MonoBehaviour
 {
-    public GameObject guardianInteractTrigger;
+	//Regions subdivided for sake of clarity
+	#region Triggerboxes
+	public GameObject guardianInteractTrigger;
     public GameObject miniGuardianTrigger;
     public GameObject labDoorTrigger;
     public GameObject interiorLabDoorTrigger;
     public GameObject gardenDoorTrigger;
     public GameObject endingTrigger;
+	#endregion
 
-    public GameObject interiorLabDoor;
+	#region gameobjects
+	public GameObject interiorLabDoor;
     public GameObject mainLabDoorL;
     public GameObject mainLabDoorR;
     public GameObject gardenDoor;
+
     public GameObject mazeDoor;
-    public GameObject interiorDoor;
+    public static GameObject interiorDoor;
+	#endregion
 
-
-    public GameObject mushroomTrigger1;
+	#region Item Triggers
+	public GameObject mushroomTrigger1;
     public GameObject mushroomTrigger2;
     public GameObject mushroomTrigger3;
     public GameObject mushroomTrigger4;
@@ -28,11 +34,10 @@ public class ItemEvents : MonoBehaviour
 
     public GameObject keycardTrigger1;
     public GameObject keycardTrigger2;
+	#endregion
 
-    public GameObject thePlayer;
-    public Text interactText;
-
-    public GameObject mushroom1;
+	#region Items
+	public GameObject mushroom1;
     public GameObject mushroom2;
     public GameObject mushroom3;
     public GameObject mushroom4;
@@ -40,9 +45,13 @@ public class ItemEvents : MonoBehaviour
 
     public GameObject keycard1;
     public GameObject keycard2;
+	#endregion
 
-    //public GameObject MushroomAmount;
-    public static int mushroomAmount = 0;
+	public GameObject thePlayer;
+    public Text interactText;
+	
+	//public GameObject MushroomAmount;
+	public static int mushroomAmount = 0;
     public static int keycardAmount = 0;
 
     //public GameObject guardianKeycard;
@@ -52,31 +61,31 @@ public class ItemEvents : MonoBehaviour
     public static bool obtainedInteriorLabKeycard = false;
 
 
-    void OnTriggerEnter(Collider other)
+	void OnTriggerEnter(Collider other)
     {
-        if (gameObject == guardianInteractTrigger)
-        {
-            if (mushroomAmount == 0 && talkedToGuardian == false)
-            {
-                interactText.text = "Collect [ 5 ] mushrooms for me and I will give you the keycard your Facility requires.";
-                talkedToGuardian = true;
-                Destroy(interiorDoor);
-                //obtainedGardenKeycard = true;
-                //obtainedInteriorLabKeycard = true;
-            }
-            else if (mushroomAmount >= 0 && mushroomAmount < 5 && talkedToGuardian == true)
-            {
-                interactText.text = "You do not have enough mushrooms yet. Come back when you have [ 5 ].";
-            }
-            else if (mushroomAmount >= 5 && talkedToGuardian == true)
-            {
-                interactText.text = "Thanks for the mushrooms! Here's that keycard I promised.";
-                obtainedGuardianKeycard = true;
-                keycardAmount += 1;
-                mushroomAmount = 0;
-            }
-        }
-        else if (gameObject == miniGuardianTrigger)
+        //if (gameObject == guardianInteractTrigger)
+        //{
+        //    if (mushroomAmount == 0 && talkedToGuardian == false)
+        //    {
+        //        interactText.text = "Collect [ 5 ] mushrooms for me and I will give you the keycard your Facility requires.";
+        //        talkedToGuardian = true;
+        //        Destroy(interiorDoor);
+        //        //obtainedGardenKeycard = true;
+        //        //obtainedInteriorLabKeycard = true;
+        //    }
+        //    else if (mushroomAmount >= 0 && mushroomAmount < 5 && talkedToGuardian == true)
+        //    {
+        //        interactText.text = "You do not have enough mushrooms yet. Come back when you have [ 5 ].";
+        //    }
+        //    else if (mushroomAmount >= 5 && talkedToGuardian == true)
+        //    {
+        //        interactText.text = "Thanks for the mushrooms! Here's that keycard I promised.";
+        //        obtainedGuardianKeycard = true;
+        //        keycardAmount += 1;
+        //        mushroomAmount = 0;
+        //    }
+        //}
+        if (gameObject == miniGuardianTrigger)
         {
             if (talkedToGuardian == false)
             {
