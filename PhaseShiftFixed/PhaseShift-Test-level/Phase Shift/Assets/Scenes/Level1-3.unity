@@ -1493,7 +1493,7 @@ PrefabInstance:
     - target: {fileID: 12950290691878367, guid: 6dccd41c63859d94f9e9ed137070c50a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2857158242564280452, guid: 6dccd41c63859d94f9e9ed137070c50a,
         type: 3}
@@ -8914,6 +8914,7 @@ MonoBehaviour:
   questCanvas: {fileID: 845624909}
   HUDCanvas: {fileID: 212100208}
   fpsController: {fileID: 1816455749}
+  interiorDoor: {fileID: 701343543}
 --- !u!65 &826368821
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -35,6 +35,7 @@ public class KeymasterAudioController : MonoBehaviour
 	private Canvas HUDCanvas;
 
 	public FirstPersonController fpsController;
+	public GameObject interiorDoor;
 
 	private int lineCount;
 	private bool incompleteTask;
@@ -81,6 +82,8 @@ public class KeymasterAudioController : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Locked;
 		HUDCanvas.enabled = true;
 		questCanvas.enabled = false;
+		Destroy(interiorDoor);
+		ItemEvents.talkedToGuardian = true;
 	}
 
 	//This is what happens when the player hits the "reject" button
@@ -99,8 +102,7 @@ public class KeymasterAudioController : MonoBehaviour
 		{
 			fpsController.enabled = false;
 			CheckLinecount();
-			ItemEvents.talkedToGuardian = true;
-			Destroy(ItemEvents.interiorDoor);
+			
 			fpsController.enabled = true;
 		}
 		else if (ItemEvents.mushroomAmount >= 0 && ItemEvents.mushroomAmount < 5 && ItemEvents.talkedToGuardian == true)

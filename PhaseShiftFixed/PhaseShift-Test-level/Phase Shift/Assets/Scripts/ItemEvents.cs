@@ -22,8 +22,7 @@ public class ItemEvents : MonoBehaviour
     public GameObject gardenDoor;
 
     public GameObject mazeDoor;
-    public static GameObject interiorDoor;
-	#endregion
+    #endregion
 
 	#region Item Triggers
 	public GameObject mushroomTrigger1;
@@ -102,7 +101,7 @@ public class ItemEvents : MonoBehaviour
         {
             if (obtainedGuardianKeycard == false)
             {
-                interactText.text = "You need the keycard from the Guardian to pass through this door.";
+                interactText.text = "This door's the way out. I think the controls are in the lab somewhere.";
             }
             else if (obtainedGuardianKeycard == true)
             {
