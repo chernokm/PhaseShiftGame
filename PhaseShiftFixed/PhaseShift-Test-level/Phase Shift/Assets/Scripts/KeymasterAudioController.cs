@@ -29,11 +29,21 @@ public class KeymasterAudioController : MonoBehaviour
 	[SerializeField]
 	private Text subtitlesText;
 
+	[SerializeField]
+	private Canvas questCanvas;
+	[SerializeField]
+	private Canvas HUDCanvas;
+
 	public FirstPersonController fpsController;
 
 	private int lineCount;
 	private bool incompleteTask;
 	private bool taskCompleted;
+
+	private void Awake()
+	{
+		questCanvas.enabled = false;
+	}
 
 	private void OnTriggerEnter(Collider other)
 	{
@@ -44,13 +54,43 @@ public class KeymasterAudioController : MonoBehaviour
 	{
 		if (Input.GetButtonDown("Interact"))
 		{
-			KeymasterQuest();
+			QuestPickup();
 		}
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
 		interactText.text = "";
+	}
+
+	//When the player initially presses F in front of the keymaster. This brings up the quest log canvas.
+	private void QuestPickup()
+	{
+		fpsController.enabled = false;
+		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.None;
+		HUDCanvas.enabled = false;
+		questCanvas.enabled = true;
+	}
+
+	//This is what happens when the player hits the "accept" button
+	public void AcceptQuest()
+	{
+		fpsController.enabled = true;
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
+		HUDCanvas.enabled = true;
+		questCanvas.enabled = false;
+	}
+
+	//This is what happens when the player hits the "reject" button
+	public void RejectQuest()
+	{
+		fpsController.enabled = true;
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
+		HUDCanvas.enabled = true;
+		questCanvas.enabled = false;
 	}
 
 	private void KeymasterQuest()
