@@ -48,16 +48,17 @@ public class KeymasterAudioController : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		interactText.text = "Press [F] to accept quest";
+		interactText.text = "This large statue looks as if it has something to say, but no way to speak...";
+		//interactText.text = "Press [F] to accept quest";
 	}
 
-	private void OnTriggerStay(Collider other)
-	{
-		if (Input.GetButtonDown("Interact"))
-		{
-			QuestPickup();
-		}
-	}
+	//private void OnTriggerStay(Collider other)
+	//{
+	//	if (Input.GetButtonDown("Interact"))
+	//	{
+	//		QuestPickup();
+	//	}
+	//}
 
 	private void OnTriggerExit(Collider other)
 	{

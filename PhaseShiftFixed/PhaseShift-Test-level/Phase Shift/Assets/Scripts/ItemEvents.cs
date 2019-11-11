@@ -88,24 +88,24 @@ public class ItemEvents : MonoBehaviour
         {
             if (talkedToGuardian == false)
             {
-                interactText.text = "You need to talk to the Temple Guardian before you can enter the maze!";
+                interactText.text = "This statue stares at you with absent eyes.";
             }
-            else if (talkedToGuardian == true)
-            {
-                interactText.text = "Oh, you talked to the Guardian now? Great! Welcome to my maze!";
-                Destroy(mazeDoor);
+            //else if (talkedToGuardian == true)
+            //{
+            //    interactText.text = "Oh, you talked to the Guardian now? Great! Welcome to my maze!";
+            //    Destroy(mazeDoor);
                 
-            }
+            //}
         }
         else if (gameObject == labDoorTrigger)
         {
             if (obtainedGuardianKeycard == false)
             {
-                interactText.text = "This door's the way out. I think the controls are in the lab somewhere.";
+                interactText.text = "This door's the way out. I need to finish my Objectives first.";
             }
             else if (obtainedGuardianKeycard == true)
             {
-                interactText.text = "[ Press F to use the keycard ]";
+                interactText.text = "[ Press F to open the door ]";
             }
             
         }
@@ -113,23 +113,25 @@ public class ItemEvents : MonoBehaviour
         {
             if (obtainedInteriorLabKeycard == false)
             {
-                interactText.text = "You need the Interior Lab Keycard to open this door.";
+                interactText.text = "You need the RED Keycard to open this door.";
             }
             else if (obtainedInteriorLabKeycard == true)
             {
                 interactText.text = "[ Press F to use the keycard ]";
+				keycardAmount -= 1;
             }
         }
         else if (gameObject == gardenDoorTrigger)
         {
             if (obtainedGardenKeycard == false)
             {
-                interactText.text = "You need the Garden Keycard to open this door.";
+                interactText.text = "You need the GREEN Keycard to open this door.";
             }
             else if (obtainedGardenKeycard == true)
             {
                 interactText.text = "[ Press F to use the keycard ]";
-            }
+				keycardAmount -= 1;
+			}
         }
         else if (gameObject == mushroomTrigger1)
         {
