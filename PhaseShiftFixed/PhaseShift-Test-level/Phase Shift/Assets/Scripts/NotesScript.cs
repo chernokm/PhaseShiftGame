@@ -7,15 +7,12 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class NotesScript : MonoBehaviour
 {
 	[SerializeField]
-	private Image clipboardImage;
-	[SerializeField]
 	private Text clipboardText;
-
 	[SerializeField]
 	private Text interactionText;
-	[SerializeField]
-	private Text crosshairs;
 
+	[SerializeField]
+	private Canvas HUDcanvas;
 	[SerializeField]
 	private Canvas clipboardCanvas;
 
@@ -51,11 +48,9 @@ public class NotesScript : MonoBehaviour
 			fpsController.enabled = false;
 			Cursor.visible = true;
 			Cursor.lockState = CursorLockMode.None;
-			crosshairs.text = "";
 			interactionText.text = "";
-
+			HUDcanvas.enabled = false;
 			clipboardCanvas.enabled = true;
-			clipboardImage.enabled = true;
 			clipboardText.text = "Test 019" + "\n" + "\n" + "The flora - specifically the mushrooms - collected from Dimension 255 contain an overwhelming amount of Zetamelaphin, useful for counteracting the negative effects of cross-dimensional Phase Shifts, however..." + "\n" + "\n" + "It's insanely toxic. Avoid contact with bare skin if at all possible.";
 		}
 	}
@@ -65,13 +60,13 @@ public class NotesScript : MonoBehaviour
 		fpsController.enabled = true;
 		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
+		HUDcanvas.enabled = true;
 
 		if(isClipboard1 == true)
 		{
 			clipboardCanvas.enabled = false;
 			clipboardText.text = "";
 			interactionText.text = "";
-			crosshairs.text = "( : )";
 		}
 	}
 }
