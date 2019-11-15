@@ -32,7 +32,12 @@ public class TeleportEvents : MonoBehaviour
     public bool teleportTriggerBool5 = false;
     public bool teleportTriggerBool6 = false;
 
-    void OnTriggerEnter(Collider other)
+	private void Start()
+	{
+		flash.enabled = false;
+	}
+
+	void OnTriggerEnter(Collider other)
     {
         if (gameObject == teleportTrigger1)
         {
@@ -154,7 +159,7 @@ public class TeleportEvents : MonoBehaviour
     {
         // Enables the image "flash", waits 0.5 then disables it so teleport seems more natural
         flash.enabled = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.02f);
         flash.enabled = false;
     }
 }
