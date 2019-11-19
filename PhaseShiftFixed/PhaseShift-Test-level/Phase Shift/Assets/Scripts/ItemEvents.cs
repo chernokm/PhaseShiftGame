@@ -101,7 +101,7 @@ public class ItemEvents : MonoBehaviour
         {
             if (obtainedGuardianKeycard == false)
             {
-                interactText.text = "This door's the way out. I need to finish my Objectives first.";
+                interactText.text = "This door's the way out. I need to finish my Tasks first.";
             }
             else if (obtainedGuardianKeycard == true)
             {
