@@ -37,6 +37,8 @@ public class Minigame : MonoBehaviour
 	public Image hackSuccessful;
     public Canvas hackingCanvas;
 
+    public GameObject redCardTrigger;
+
     public Canvas hudCanvas;
 
     [SerializeField]
@@ -202,5 +204,6 @@ public class Minigame : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         hudCanvas.enabled = true;
         fpsController.enabled = true;
+        //redCardTrigger.SetActive(true);
     }
 }

@@ -31,8 +31,8 @@ public class ItemEvents : MonoBehaviour
     public GameObject mushroomTrigger4;
     public GameObject mushroomTrigger5;
 
-    public GameObject keycardTrigger1;
-    public GameObject keycardTrigger2;
+    //public GameObject keycardTrigger1;
+    //public GameObject keycardTrigger2;
 	#endregion
 
 	#region Items
@@ -42,8 +42,8 @@ public class ItemEvents : MonoBehaviour
     public GameObject mushroom4;
     public GameObject mushroom5;
 
-    public GameObject keycard1;
-    public GameObject keycard2;
+    //public GameObject keycard1;
+    //public GameObject keycard2;
 	#endregion
 
 	public GameObject thePlayer;
@@ -153,16 +153,16 @@ public class ItemEvents : MonoBehaviour
         {
             interactText.text = "[ Press F to pick up the mushroom ]";
         }
-        else if (gameObject == keycardTrigger1)
-        {
-            interactText.text = "[ Press F to pick up the keycard ]";
-            obtainedInteriorLabKeycard = true;
-        }
-        else if (gameObject == keycardTrigger2)
-        {
-            interactText.text = "[ Press F to pick up the keycard ]";
-            obtainedGardenKeycard = true;
-        }
+        //else if (gameObject == keycardTrigger1)
+        //{
+        //    interactText.text = "[ Press F to pick up the keycard ]";
+        //    obtainedInteriorLabKeycard = true;
+        //}
+        //else if (gameObject == keycardTrigger2)
+        //{
+        //    interactText.text = "[ Press F to pick up the keycard ]";
+        //    obtainedGardenKeycard = true;
+        //}
         else if (gameObject == endingTrigger)
         {
             interactText.text = "YOU ESCAPED! THANKS FOR PLAYING!";
@@ -202,17 +202,17 @@ public class ItemEvents : MonoBehaviour
             {
                 Pickup();
             }
-            else if (gameObject == keycardTrigger1)
-            {
-                //obtainedInteriorLabKeycard = true;
-                Pickup();
+            //else if (gameObject == keycardTrigger1)
+            //{
+            //    //obtainedInteriorLabKeycard = true;
+            //    Pickup();
                 
-            }
-            else if (gameObject == keycardTrigger2)
-            {
-                //obtainedGardenKeycard = true;
-                Pickup();
-            }
+            //}
+            //else if (gameObject == keycardTrigger2)
+            //{
+            //    //obtainedGardenKeycard = true;
+            //    Pickup();
+            //}
             else if (gameObject == interiorLabDoorTrigger && obtainedInteriorLabKeycard == true)
             {
                 Open();
@@ -267,26 +267,26 @@ public class ItemEvents : MonoBehaviour
             Destroy(mushroomTrigger5);
             mushroomAmount += 1;
         }
-        else if (gameObject == keycardTrigger1)
-        {
-            //obtainedInteriorLabKeycard = true;
-            Destroy(keycard1);
-            interactText.text = "";
-            Destroy(keycardTrigger1);
-            keycardAmount += 1;
-            //obtainedInteriorLabKecard = true;
+        //else if (gameObject == keycardTrigger1)
+        //{
+        //    //obtainedInteriorLabKeycard = true;
+        //    Destroy(keycard1);
+        //    interactText.text = "";
+        //    Destroy(keycardTrigger1);
+        //    keycardAmount += 1;
+        //    //obtainedInteriorLabKecard = true;
             
-        }
-        else if (gameObject == keycardTrigger2)
-        {
-            //obtainedGardenKeycard = true;
-            Destroy(keycard2);
-            interactText.text = "";
-            Destroy(keycardTrigger2);
-            keycardAmount += 1;
-            //obtainedGardenKeycard = true;
+        //}
+        //else if (gameObject == keycardTrigger2)
+        //{
+        //    //obtainedGardenKeycard = true;
+        //    Destroy(keycard2);
+        //    interactText.text = "";
+        //    Destroy(keycardTrigger2);
+        //    keycardAmount += 1;
+        //    //obtainedGardenKeycard = true;
             
-        }
+        //}
     }
 
     public void Open()

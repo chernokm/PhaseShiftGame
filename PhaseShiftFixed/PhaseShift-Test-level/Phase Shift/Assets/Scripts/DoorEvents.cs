@@ -21,12 +21,15 @@ public class DoorEvents : MonoBehaviour
     public GameObject redKeycardTrigger;
     public GameObject greenKeycardTrigger;
 
+    public GameObject glass;
+
     public bool hTerminalTrigger = false;
     public bool hTerminalKeycardTrigger = false;
     public bool nLabDoorTrigger = false;
     public bool gDoorTrigger = false;
-    public bool obtainedGreenKeycard = false;
-    public bool obtainedRedKeycard = false;
+    public static bool obtainedGreenKeycard = false;
+    public static bool obtainedRedKeycard = false;
+    public bool terminalHacked = false;
 
     public static int keycardAmount = 0;
 
@@ -47,7 +50,16 @@ public class DoorEvents : MonoBehaviour
     {
         if (gameObject == hackingTerminalTrigger)
         {
-            interactText.text = "[ Press F to hack this terminal ]";
+            if (terminalHacked == true)
+            {
+                interactText.text = "[ Press F to pick up red keycard ]";
+                obtainedRedKeycard = true;
+            }
+            else if (terminalHacked == false)
+            {
+                interactText.text = "[ Press F to hack this terminal ]";
+            }
+            
         }
         else if (gameObject == hackingTerminalKeycardTrigger)
         {
@@ -62,6 +74,7 @@ public class DoorEvents : MonoBehaviour
             else if (obtainedRedKeycard == true)
             {
                 interactText.text = "[ Press F to open the door ]";
+                keycardAmount -= 1;
             }
         }
         else if (gameObject == gardenDoorTrigger)
@@ -73,12 +86,13 @@ public class DoorEvents : MonoBehaviour
             else if (obtainedGreenKeycard == true)
             {
                 interactText.text = "[ Press F to open the door ]";
+                keycardAmount -= 1;
             }
         }
         else if (gameObject == redKeycardTrigger)
         {
-            interactText.text = "[ Press F to pick up the red keycard ]";
-            obtainedRedKeycard = true;
+            //interactText.text = "[ Press F to pick up the red keycard ]";
+            //obtainedRedKeycard = true;
         }
         else if (gameObject == greenKeycardTrigger)
         {
@@ -103,16 +117,27 @@ public class DoorEvents : MonoBehaviour
             else if (gameObject == greenKeycardTrigger)
             {
                 Pickup();
+                //keycardAmount += 1;
             }
             else if (gameObject == hackingTerminalTrigger)
             {
-                Hacking();
+                if (terminalHacked == true)
+                {
+                    Pickup();
+                    obtainedRedKeycard = true;
+                    //keycardAmount += 1;
+                }
+                else if (terminalHacked == false)
+                {
+                    Hacking();
+                }
+                
             }
-            else if (gameObject == newLabDoorTrigger)
+            else if (gameObject == newLabDoorTrigger && obtainedRedKeycard == true)
             {
                 Open();
             }
-            else if (gameObject == gardenDoorTrigger)
+            else if (gameObject == gardenDoorTrigger && obtainedGreenKeycard == true)
             {
                 Open();
             }
@@ -121,11 +146,11 @@ public class DoorEvents : MonoBehaviour
 
     public void Pickup()
     {
-        if (gameObject == redKeycardTrigger)
+        if (gameObject == hackingTerminalTrigger)
         {
             Destroy(redKeycard);
             interactText.text = "";
-            Destroy(redKeycardTrigger);
+            Destroy(hackingTerminalTrigger);
             keycardAmount += 1;
         }
         else if (gameObject == greenKeycardTrigger)
@@ -164,6 +189,9 @@ public class DoorEvents : MonoBehaviour
             fpsController.enabled = false;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            terminalHacked = true;
+            interactText.text = "[ Press F to pick up red keycard ]";
+            Destroy(glass);
         }
     }
 

@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
     {
         // Updating the HUD
         MushroomAmount.GetComponent<Text>().text = "" + ItemEvents.mushroomAmount;
-        KeycardAmount.GetComponent<Text>().text = "" + ItemEvents.keycardAmount;
+        KeycardAmount.GetComponent<Text>().text = "" + DoorEvents.keycardAmount;
         
     }
     
