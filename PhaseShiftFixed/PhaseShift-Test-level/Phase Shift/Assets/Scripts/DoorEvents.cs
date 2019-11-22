@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class DoorEvents : MonoBehaviour
 {
-
     public GameObject hackingTerminalTrigger;
     public GameObject hackingTerminalKeycardTrigger;
     public GameObject newLabDoorTrigger;
@@ -31,8 +31,17 @@ public class DoorEvents : MonoBehaviour
     public static int keycardAmount = 0;
 
     public Text interactText;
+    public Canvas HUDcanvas;
+    public Canvas hackingCanvas;
 
-    public GameObject thePlayer;
+    //public GameObject thePlayer;
+    [SerializeField]
+    private FirstPersonController fpsController;
+
+    private void Awake()
+    {
+        hackingCanvas.enabled = false;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -150,7 +159,11 @@ public class DoorEvents : MonoBehaviour
     {
         if (gameObject == hackingTerminalTrigger)
         {
-
+            hackingCanvas.enabled = true;
+            HUDcanvas.enabled = false;
+            fpsController.enabled = false;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 

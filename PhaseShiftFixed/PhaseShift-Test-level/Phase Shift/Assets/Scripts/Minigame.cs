@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class Minigame : MonoBehaviour
 {
@@ -34,8 +35,14 @@ public class Minigame : MonoBehaviour
 	#endregion
 
 	public Image hackSuccessful;
+    public Canvas hackingCanvas;
 
-	public AudioSource audioSource;
+    public Canvas hudCanvas;
+
+    [SerializeField]
+    private FirstPersonController fpsController;
+
+    public AudioSource audioSource;
 
 	private void Awake()
 	{
@@ -190,6 +197,10 @@ public class Minigame : MonoBehaviour
 	IEnumerator HackCompleted()
 	{
 		yield return new WaitForSeconds(2.5f);
-		hackSuccessful.enabled = false;
-	}
+        hackingCanvas.enabled = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        hudCanvas.enabled = true;
+        fpsController.enabled = true;
+    }
 }
