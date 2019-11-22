@@ -18,6 +18,11 @@ public class TeleportEvents : MonoBehaviour
     public GameObject teleportTarget5;
     public GameObject teleportTarget6;
 
+    //NEW TRIGGERS
+    public GameObject hackingTerminalTrigger;
+    public GameObject hackingTerminalKeycardTrigger;
+    public GameObject newLabDoorTrigger;
+
     public GameObject thePlayer;
 
     public Text interactText;
@@ -68,6 +73,10 @@ public class TeleportEvents : MonoBehaviour
         {
             interactText.text = "[ press F to Dimensional Travel ]";
             teleportTriggerBool6 = true;
+        }
+        else if (gameObject == hackingTerminalTrigger)
+        {
+            interactText.text = "[ press F to hack the terminal ]";
         }
     }
 
