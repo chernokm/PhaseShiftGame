@@ -22,6 +22,10 @@ public class Elevator : MonoBehaviour
 	private int lineCount;
 
 	private AudioSource audio;
+	[SerializeField]
+	private AudioClip doorOpen;
+	[SerializeField]
+	private AudioClip elevatorRide;
 
 	// Start is called before the first frame update
 	void Start()
@@ -45,6 +49,7 @@ public class Elevator : MonoBehaviour
 
 	private void ElevatorScene()
 	{
+		audio.PlayOneShot(elevatorRide, 1);
 		if (lineCount == 0)
 		{
 			StartCoroutine(WaitForSound());
@@ -82,7 +87,8 @@ public class Elevator : MonoBehaviour
 		}
 		if (lineCount == 5)
 		{
-			audio.Play();
+			audio.Stop();
+			audio.PlayOneShot(doorOpen, 1);
 			elevatorDoor.SetActive(false);
 			speakerButton.enabled = false;
 			nameText.text = "";
