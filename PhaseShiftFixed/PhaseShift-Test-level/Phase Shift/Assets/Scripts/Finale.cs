@@ -86,6 +86,7 @@ public class Finale : MonoBehaviour
 
 	private void Finish()
 	{
+		ItemEvents.mushroomAmount = 0;
 		interactionText.text = "";
 		if (lineCount == 0)
 		{
