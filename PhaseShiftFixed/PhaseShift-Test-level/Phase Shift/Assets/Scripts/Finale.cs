@@ -58,7 +58,7 @@ public class Finale : MonoBehaviour
 	private int lineCount;
 	private float duration;
 
-	private bool isSelected;
+	public bool isSelected;
 
 	private void Start()
 	{
