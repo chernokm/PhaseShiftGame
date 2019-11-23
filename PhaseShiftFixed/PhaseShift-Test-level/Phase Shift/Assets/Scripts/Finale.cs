@@ -27,23 +27,36 @@ public class Finale : MonoBehaviour
 	private Image speakerButton;
 	#endregion
 
+	#region gameobjects/triggers
 	[SerializeField]
 	private GameObject DoorLeft;
 	[SerializeField]
 	private GameObject DoorRight;
-
-	[SerializeField]
-	private GameObject TextPopup;
 	[SerializeField]
 	private GameObject finalTrigger;
 	[SerializeField]
 	private GameObject doorTrigger;
+	#endregion
 
+	#region audio
 	private AudioSource audioSource;
 	[SerializeField]
 	private AudioClip doorOpen;
+	[SerializeField]
+	private AudioClip alpha1;
+	[SerializeField]
+	private AudioClip alpha2;
+	[SerializeField]
+	private AudioClip alpha3;
+	[SerializeField]
+	private AudioClip alpha4;
+	#endregion
+
+	[SerializeField]
+	private GameObject TextPopup;
 
 	private int lineCount;
+	private float duration;
 
 	private void Start()
 	{
@@ -92,7 +105,9 @@ public class Finale : MonoBehaviour
 		interactionText.text = "";
 		if (lineCount == 0)
 		{
+			duration = alpha1.length;
 			StartCoroutine(WaitForApproval());
+			audioSource.PlayOneShot(alpha1, 1);
 			speakerButton.enabled = true;
 			nameText.text = "<b>Alpha:</b>";
 			subtitlesText.text = "Oh! You actually got something? Let me take a look here...";
@@ -100,7 +115,9 @@ public class Finale : MonoBehaviour
 		}
 		if (lineCount == 1)
 		{
+			duration = alpha2.length;
 			StartCoroutine(WaitForApproval());
+			audioSource.PlayOneShot(alpha2, 1);
 			speakerButton.enabled = true;
 			nameText.text = "<b>Alpha:</b>";
 			subtitlesText.text = "One. Two.. Three... Yep that's four.";
@@ -111,7 +128,9 @@ public class Finale : MonoBehaviour
 			Destroy(DoorLeft);
 			Destroy(DoorRight);
 			audioSource.PlayOneShot(doorOpen, 1);
+			duration = alpha3.length;
 			StartCoroutine(WaitForApproval());
+			audioSource.PlayOneShot(alpha3, 1);
 			speakerButton.enabled = true;
 			nameText.text = "<b>Alpha:</b>";
 			subtitlesText.text = "Lab boys should've opened up the chamber for you now.";
@@ -119,7 +138,9 @@ public class Finale : MonoBehaviour
 		}
 		if (lineCount == 3)
 		{
+			duration = alpha4.length;
 			StartCoroutine(WaitForApproval());
+			audioSource.PlayOneShot(alpha4, 1);
 			speakerButton.enabled = true;
 			nameText.text = "<b>Alpha:</b>";
 			subtitlesText.text = "How you get back is your own problem.";
@@ -139,7 +160,7 @@ public class Finale : MonoBehaviour
 
 	private IEnumerator WaitForApproval()
 	{
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(duration);
 		lineCount++;
 		Finish();
 	}

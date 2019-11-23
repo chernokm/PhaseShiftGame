@@ -1921,7 +1921,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh426896
+  m_Name: pb_Mesh459038
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17652,9 +17652,14 @@ MonoBehaviour:
   speakerButton: {fileID: 8974096}
   DoorLeft: {fileID: 1673577396}
   DoorRight: {fileID: 109797825}
-  TextPopup: {fileID: 816241558}
   finalTrigger: {fileID: 427304120}
+  doorTrigger: {fileID: 231966737}
   doorOpen: {fileID: 8300000, guid: 747279fd07006a9468dfb557fd7c5936, type: 3}
+  alpha1: {fileID: 8300000, guid: ebb8383652f6c2b46a5c46b3d208f4e3, type: 3}
+  alpha2: {fileID: 8300000, guid: 66fad344fd2d0604c800b8a95dbac871, type: 3}
+  alpha3: {fileID: 8300000, guid: 6e86cc82fc966864c9d73376732a6a52, type: 3}
+  alpha4: {fileID: 8300000, guid: 9c5d46318d80a7943924573b0899d95e, type: 3}
+  TextPopup: {fileID: 816241558}
 --- !u!64 &427304123
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -23955,7 +23960,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh426634
+  m_Name: pb_Mesh458776
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25324,7 +25329,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e31c960c17f276a4eb389dd214b50106, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -37221,6 +37226,11 @@ MonoBehaviour:
   speakerButton: {fileID: 8974096}
   elevatorDoor: {fileID: 1389624304}
   elevatorTrigger: {fileID: 1345816261}
+  Alpha1: {fileID: 8300000, guid: f4c21d575aa75eb47bcd68046f7fc64d, type: 3}
+  Alpha2: {fileID: 8300000, guid: 90fc46af1c6894545ac01bf6ece8fad6, type: 3}
+  Alpha3: {fileID: 8300000, guid: 2ca8382d8eed69b48911ad4fdb360e89, type: 3}
+  Alpha4: {fileID: 8300000, guid: e1e7b91bc845a2e4c9558058bf8baf07, type: 3}
+  Alpha5: {fileID: 8300000, guid: 5cff55b5b84008c428873750bc04a985, type: 3}
   doorOpen: {fileID: 8300000, guid: 747279fd07006a9468dfb557fd7c5936, type: 3}
   elevatorRide: {fileID: 8300000, guid: 843b305a45e9e2d49a3f144ab5b0ab93, type: 3}
 --- !u!64 &1345816263
@@ -39734,7 +39744,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh428590
+  m_Name: pb_Mesh460732
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -48736,7 +48746,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh427936
+  m_Name: pb_Mesh460078
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -50697,6 +50707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43e8cefb668c3d46b95282382713170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactText: {fileID: 1990366564}
 --- !u!64 &1852271703
 MeshCollider:
   m_ObjectHideFlags: 0
