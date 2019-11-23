@@ -30,6 +30,7 @@ public class Elevator : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		speakerButton.enabled = true;
 		nameText.text = "";
 		subtitlesText.text = "";
 		audio = GetComponent<AudioSource>();
@@ -75,7 +76,7 @@ public class Elevator : MonoBehaviour
 		{
 			StartCoroutine(WaitForSound());
 			nameText.text = "<b>Alpha:</b>";
-			subtitlesText.text = "When you’re done, throw them all into the equipment in the lab and we’ll be onto test 2. Nice and easy.";
+			subtitlesText.text = "When you’re done, throw them all onto the tray in the lab and we’ll be onto test 2. Nice and easy.";
 			StopCoroutine(WaitForSound());
 		}
 		if (lineCount == 4)
