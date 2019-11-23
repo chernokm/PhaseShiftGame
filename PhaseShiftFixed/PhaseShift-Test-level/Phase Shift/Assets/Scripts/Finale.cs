@@ -58,6 +58,8 @@ public class Finale : MonoBehaviour
 	private int lineCount;
 	private float duration;
 
+	private bool isSelected;
+
 	private void Start()
 	{
 		Mushroom1.SetActive(false);
@@ -78,7 +80,6 @@ public class Finale : MonoBehaviour
 			Mushroom2.SetActive(true);
 			Mushroom3.SetActive(true);
 			Mushroom4.SetActive(true);
-			interactionText.text = "Press [ F ] to complete the chamber";
 		}
 		else if(ItemEvents.mushroomAmount < 4)
 		{
@@ -88,9 +89,17 @@ public class Finale : MonoBehaviour
 
 	private void OnTriggerStay(Collider other)
 	{
-		if (Input.GetButtonDown("Interact"))
+		if(isSelected == false)
 		{
-			Finish();
+			interactionText.text = "Press [ F ] to complete the chamber";
+			if (Input.GetButtonDown("Interact"))
+			{
+				Finish();
+			}
+		}
+		else if (isSelected == true)
+		{
+			interactionText.text = "";
 		}
 	}
 
@@ -101,6 +110,7 @@ public class Finale : MonoBehaviour
 
 	private void Finish()
 	{
+		isSelected = true;
 		ItemEvents.mushroomAmount = 0;
 		interactionText.text = "";
 		if (lineCount == 0)

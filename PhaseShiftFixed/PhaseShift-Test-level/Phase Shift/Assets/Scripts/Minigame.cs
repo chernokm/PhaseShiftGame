@@ -36,9 +36,6 @@ public class Minigame : MonoBehaviour
 
 	public Image hackSuccessful;
     public Canvas hackingCanvas;
-
-    public GameObject redCardTrigger;
-
     public Canvas hudCanvas;
 
     [SerializeField]
@@ -49,6 +46,8 @@ public class Minigame : MonoBehaviour
 	private AudioClip buttonClick;
 	[SerializeField]
 	private AudioClip glitchOut;
+
+	DoorEvents doorcheck = new DoorEvents();
 
 	private void Start()
 	{
@@ -196,6 +195,7 @@ public class Minigame : MonoBehaviour
 
 	private void HackSuccessful()
 	{
+		doorcheck.terminalHacked = true;
 		audioSource.PlayOneShot(glitchOut, 0.7f);
 		hackSuccessful.enabled = true;
 		StartCoroutine(HackCompleted());
@@ -209,6 +209,14 @@ public class Minigame : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         hudCanvas.enabled = true;
         fpsController.enabled = true;
-        //redCardTrigger.SetActive(true);
     }
+
+	public void ExitHack()
+	{
+		fpsController.enabled = true;
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
+		hudCanvas.enabled = true;
+		hackingCanvas.enabled = false;
+	}
 }

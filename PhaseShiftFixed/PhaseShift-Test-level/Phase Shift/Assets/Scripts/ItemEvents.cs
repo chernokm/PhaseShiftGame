@@ -118,7 +118,7 @@ public class ItemEvents : MonoBehaviour
             else if (obtainedInteriorLabKeycard == true)
             {
                 interactText.text = "[ Press F to use the keycard ]";
-				keycardAmount -= 1;
+				//keycardAmount -= 1;
             }
         }
         else if (gameObject == gardenDoorTrigger)
@@ -130,7 +130,7 @@ public class ItemEvents : MonoBehaviour
             else if (obtainedGardenKeycard == true)
             {
                 interactText.text = "[ Press F to use the keycard ]";
-				keycardAmount -= 1;
+				//keycardAmount -= 1;
 			}
         }
         else if (gameObject == mushroomTrigger1)
