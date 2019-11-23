@@ -9,14 +9,4 @@ public class EndGame : MonoBehaviour
 	{
 		SceneManager.LoadScene(2);
 	}
-
-	public void Restart()
-	{
-		SceneManager.LoadScene(0);
-	}
-
-	public void Quit()
-	{
-		Application.Quit();
-	}
 }

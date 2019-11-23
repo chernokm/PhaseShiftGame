@@ -62,7 +62,7 @@ public class Elevator : MonoBehaviour
 		{
 			StartCoroutine(WaitForSound());
 			nameText.text = "<b>Alpha:</b>";
-			subtitlesText.text = "You’re going to see our signature Reality Disks scattered about, step on those to use the QREW. You’ll be zapped to the next one in sequence. You’ll know them when you see them.";
+			subtitlesText.text = "You’re going to see our signature Reality Disks scattered about, step on one of those to use the QREW. You’ll be zapped to the next one in sequence. You’ll know them when you see them.";
 			StopCoroutine(WaitForSound());
 		}
 		if (lineCount == 2)

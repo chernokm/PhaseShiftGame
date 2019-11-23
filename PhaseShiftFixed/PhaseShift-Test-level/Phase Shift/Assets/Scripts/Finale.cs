@@ -36,6 +36,8 @@ public class Finale : MonoBehaviour
 	private GameObject TextPopup;
 	[SerializeField]
 	private GameObject finalTrigger;
+	[SerializeField]
+	private GameObject doorTrigger;
 
 	private AudioSource audioSource;
 	[SerializeField]
@@ -131,6 +133,7 @@ public class Finale : MonoBehaviour
 			subtitlesText.text = "";
 			StopCoroutine(WaitForApproval());
 			finalTrigger.SetActive(false);
+			Destroy(doorTrigger);
 		}
 	}
 
