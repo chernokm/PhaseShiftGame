@@ -23,6 +23,8 @@ public class DoorEvents : MonoBehaviour
 
     public GameObject glass;
 
+	public AudioSource doorOpen;
+
     public bool hTerminalTrigger = false;
     public bool hTerminalKeycardTrigger = false;
     public bool nLabDoorTrigger = false;
@@ -69,7 +71,7 @@ public class DoorEvents : MonoBehaviour
         {
             if (obtainedRedKeycard == false)
             {
-                interactText.text = "This door requires the red keycard to open";
+                interactText.text = "This door requires the Red keycard to open.";
             }
             else if (obtainedRedKeycard == true)
             {
@@ -81,7 +83,7 @@ public class DoorEvents : MonoBehaviour
         {
             if (obtainedGreenKeycard == false)
             {
-                interactText.text = "this door requires the green keycard to open";
+                interactText.text = "this door requires the Green keycard to open.";
             }
             else if (obtainedGreenKeycard == true)
             {
@@ -168,6 +170,7 @@ public class DoorEvents : MonoBehaviour
         if (gameObject == newLabDoorTrigger)
         {
             Destroy(newLabDoor);
+			doorOpen.Play();
             interactText.text = "";
             Destroy(newLabDoorTrigger);
         }
@@ -176,6 +179,7 @@ public class DoorEvents : MonoBehaviour
             Destroy(gardenDoorL);
             Destroy(gardenDoorR);
             interactText.text = "";
+			doorOpen.Play();
             Destroy(gardenDoorTrigger);
         }
     }

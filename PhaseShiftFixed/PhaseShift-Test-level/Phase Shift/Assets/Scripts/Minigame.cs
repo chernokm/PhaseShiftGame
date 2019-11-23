@@ -45,14 +45,19 @@ public class Minigame : MonoBehaviour
     private FirstPersonController fpsController;
 
     public AudioSource audioSource;
+	[SerializeField]
+	private AudioClip buttonClick;
+	[SerializeField]
+	private AudioClip glitchOut;
 
-	private void Awake()
+	private void Start()
 	{
 		hackSuccessful.enabled = false;
 	}
 
 	public void ChangeImage() // for the bottom center panel exclusively.
     {
+		audioSource.PlayOneShot(buttonClick, 1);
         if(isStraight == false && isT == false && isCorner == false) // no piece
         {
 			if (b1.image.sprite == pipeOn)
@@ -191,7 +196,7 @@ public class Minigame : MonoBehaviour
 
 	private void HackSuccessful()
 	{
-		audioSource.Play();
+		audioSource.PlayOneShot(glitchOut, 0.7f);
 		hackSuccessful.enabled = true;
 		StartCoroutine(HackCompleted());
 	}
