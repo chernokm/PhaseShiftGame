@@ -22,6 +22,7 @@ public class DoorEvents : MonoBehaviour
     public GameObject greenKeycardTrigger;
 
     public GameObject glass;
+	public GameObject hackedNotification;
 
 	public AudioSource doorOpen;
 
@@ -46,6 +47,7 @@ public class DoorEvents : MonoBehaviour
     private void Awake()
     {
         hackingCanvas.enabled = false;
+		hackedNotification.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -194,6 +196,7 @@ public class DoorEvents : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             terminalHacked = true;
+			hackedNotification.SetActive(true);
             interactText.text = "[ Press F to pick up red keycard ]";
             Destroy(glass);
         }

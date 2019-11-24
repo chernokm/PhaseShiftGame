@@ -89,7 +89,7 @@ public class Finale : MonoBehaviour
 
 	private void OnTriggerStay(Collider other)
 	{
-		if(isSelected == false)
+		if(isSelected == false && ItemEvents.mushroomAmount ==4)
 		{
 			interactionText.text = "Press [ F ] to complete the chamber";
 			if (Input.GetButtonDown("Interact"))

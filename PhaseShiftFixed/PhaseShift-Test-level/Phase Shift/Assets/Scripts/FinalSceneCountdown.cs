@@ -86,7 +86,7 @@ public class FinalSceneCountdown : MonoBehaviour
 
 	private IEnumerator StartCountdown()
 	{
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(1.2f);
 		timeLeft--;
 		Countdown();
 	}
