@@ -52,6 +52,14 @@ public class TerminalInteract : MonoBehaviour
 		audioSource = GetComponent<AudioSource>();
 	}
 
+	private void Update()
+	{
+		if (Input.GetButtonDown("Cancel"))
+		{
+			CloseTerminal();
+		}
+	}
+
 	private void OnTriggerEnter(Collider other)
 	{
 		interactText.text = "Press [F] to access Terminal";

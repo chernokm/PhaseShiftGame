@@ -56,6 +56,8 @@ public class Minigame : MonoBehaviour
 	[SerializeField]
 	private AudioClip glitchOut;
 
+	public static bool isIncomplete = true;
+
 	DoorEvents doorcheck = new DoorEvents();
 
 	private void Start()
@@ -228,6 +230,8 @@ public class Minigame : MonoBehaviour
 
 	IEnumerator HackCompleted()
 	{
+		isIncomplete = false;
+		Destroy(doorcheck.glass);
 		yield return new WaitForSeconds(2.5f);
         hackingCanvas.enabled = false;
         Cursor.visible = false;
@@ -238,10 +242,19 @@ public class Minigame : MonoBehaviour
 
 	public void ExitHack()
 	{
+		isIncomplete = true;
 		fpsController.enabled = true;
 		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
 		hudCanvas.enabled = true;
 		hackingCanvas.enabled = false;
+	}
+
+	private void Update()
+	{
+		if (Input.GetButtonDown("Cancel"))
+		{
+			ExitHack();
+		}
 	}
 }

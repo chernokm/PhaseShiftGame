@@ -52,7 +52,7 @@ public class DoorEvents : MonoBehaviour
 		hackedNotification.SetActive(false);
     }
 
-    private void OnTriggerEnter(Collider other)
+	private void OnTriggerEnter(Collider other)
     {
         if (gameObject == hackingTerminalTrigger)
         {
@@ -194,15 +194,29 @@ public class DoorEvents : MonoBehaviour
     {
         if (gameObject == hackingTerminalTrigger)
         {
-            hackingCanvas.enabled = true;
-            HUDcanvas.enabled = false;
-            fpsController.enabled = false;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            terminalHacked = true;
+			hackingCanvas.enabled = true;
+			HUDcanvas.enabled = false;
+			fpsController.enabled = false;
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
+			terminalHacked = true;
 			hackedNotification.SetActive(true);
-            interactText.text = "[ Press F to pick up red keycard ]";
-            Destroy(glass);
+			interactText.text = "[ Press F to pick up red keycard ]";
+			Destroy(glass);
+
+			//if(Minigame.isIncomplete == false)
+			//{
+
+			//}
+			//else if (Minigame.isIncomplete == true)
+			//{
+			//	hackingCanvas.enabled = true;
+			//	HUDcanvas.enabled = false;
+			//	fpsController.enabled = false;
+			//	Cursor.visible = true;
+			//	Cursor.lockState = CursorLockMode.None;
+			//	terminalHacked = false;
+			//}
         }
     }
 

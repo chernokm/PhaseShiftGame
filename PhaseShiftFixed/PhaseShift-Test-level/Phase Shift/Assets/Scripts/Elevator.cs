@@ -12,6 +12,8 @@ public class Elevator : MonoBehaviour
 	private Text nameText;
 	[SerializeField]
 	private Image speakerButton;
+	[SerializeField]
+	private Text notificationText;
 
 	[SerializeField]
 	private GameObject elevatorDoor;
@@ -33,6 +35,7 @@ public class Elevator : MonoBehaviour
 	#endregion
 
 	private int lineCount;
+	private bool dialougeSkipped;
 
 	private AudioSource audio;
 	private float duration;
@@ -48,12 +51,28 @@ public class Elevator : MonoBehaviour
 		speakerButton.enabled = true;
 		nameText.text = "";
 		subtitlesText.text = "";
+		notificationText.text = "Press [ESC] to skip cutscene";
 		audio = GetComponent<AudioSource>();
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
 		ElevatorScene();
+	}
+
+	private void OnTriggerStay(Collider other)
+	{
+		if(dialougeSkipped == false)
+		{
+			if (Input.GetButtonDown("Cancel"))
+			{
+				DialogueSkip();
+			}
+		}
+		else if(dialougeSkipped == true)
+		{
+
+		}
 	}
 
 	private void OnTriggerExit(Collider other)
@@ -119,6 +138,7 @@ public class Elevator : MonoBehaviour
 			speakerButton.enabled = false;
 			nameText.text = "";
 			subtitlesText.text = "";
+			notificationText.text = "";
 		}
 	}
 
@@ -127,5 +147,18 @@ public class Elevator : MonoBehaviour
 		yield return new WaitForSeconds(duration);
 		lineCount++;
 		ElevatorScene();
+	}
+
+	private void DialogueSkip()
+	{
+		dialougeSkipped = true;
+		lineCount = 5;
+		audio.Stop();
+		audio.PlayOneShot(doorOpen, 1);
+		elevatorDoor.SetActive(false);
+		speakerButton.enabled = false;
+		nameText.text = "";
+		subtitlesText.text = "";
+		notificationText.text = "";
 	}
 }
