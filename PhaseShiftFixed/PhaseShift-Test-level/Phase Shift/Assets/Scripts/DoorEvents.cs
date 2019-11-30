@@ -78,7 +78,6 @@ public class DoorEvents : MonoBehaviour
             else if (obtainedRedKeycard == true)
             {
                 interactText.text = "[ Press F to open the door ]";
-                keycardAmount -= 1;
             }
         }
         else if (gameObject == gardenDoorTrigger)
@@ -90,7 +89,6 @@ public class DoorEvents : MonoBehaviour
             else if (obtainedGreenKeycard == true)
             {
                 interactText.text = "[ Press F to open the door ]";
-                keycardAmount -= 1;
             }
         }
         else if (gameObject == redKeycardTrigger)
@@ -140,10 +138,12 @@ public class DoorEvents : MonoBehaviour
             else if (gameObject == newLabDoorTrigger && obtainedRedKeycard == true)
             {
                 Open();
+				keycardAmount--;
             }
             else if (gameObject == gardenDoorTrigger && obtainedGreenKeycard == true)
             {
                 Open();
+				keycardAmount--;
             }
         }
     }

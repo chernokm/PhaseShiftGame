@@ -987,7 +987,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh126838
+  m_Name: pb_Mesh24018
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2230,7 +2230,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh125578
+  m_Name: pb_Mesh22730
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23254,7 +23254,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh125096
+  m_Name: pb_Mesh22248
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27535,6 +27535,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309859327190816649, guid: 549a63dbea4bebe40b319b2c61d69513,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -158
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 549a63dbea4bebe40b319b2c61d69513, type: 3}
@@ -40758,7 +40763,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh126402
+  m_Name: pb_Mesh23582
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40927,7 +40932,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh125602
+  m_Name: pb_Mesh22754
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -41507,7 +41512,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh125114
+  m_Name: pb_Mesh22266
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -51309,6 +51314,54 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 166.9305
       objectReference: {fileID: 0}
+    - target: {fileID: 3434393817290342997, guid: 0933e70225592f945a222875135b16cb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7893981
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434393817290342997, guid: 0933e70225592f945a222875135b16cb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.92813945
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434393817290342997, guid: 0933e70225592f945a222875135b16cb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 97.28784
+      objectReference: {fileID: 0}
+    - target: {fileID: -3890804841442278506, guid: 0933e70225592f945a222875135b16cb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7893981
+      objectReference: {fileID: 0}
+    - target: {fileID: -3890804841442278506, guid: 0933e70225592f945a222875135b16cb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.92813945
+      objectReference: {fileID: 0}
+    - target: {fileID: -3890804841442278506, guid: 0933e70225592f945a222875135b16cb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -127.36723
+      objectReference: {fileID: 0}
+    - target: {fileID: -4830967920783790783, guid: 0933e70225592f945a222875135b16cb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 7211448773848044386, guid: 0933e70225592f945a222875135b16cb,
+        type: 3}
+    - target: {fileID: -4498239894851713905, guid: 0933e70225592f945a222875135b16cb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1151844921754575795, guid: fbd0b55e7f31ed744bfab745ef6d54de,
+        type: 3}
+    - target: {fileID: 1918850424991181452, guid: 0933e70225592f945a222875135b16cb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1151844921754575795, guid: fbd0b55e7f31ed744bfab745ef6d54de,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0933e70225592f945a222875135b16cb, type: 3}
 --- !u!1 &1794052170
@@ -54391,6 +54444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterProNighttime
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bcae914220acd4907840a029bb9d9aec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bcae914220acd4907840a029bb9d9aec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -34.86483
@@ -55622,7 +55679,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-76428
+  m_Name: pb_Mesh24742
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -58450,17 +58507,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5670565329432284391, guid: 6dccd41c63859d94f9e9ed137070c50a,
-        type: 3}
-      propertyPath: m_Text
-      value: '- Collect (4) mushrooms for The Facility
-
-
-        - Bring them back to 100 Lab for study
-
-
-        - Move onto next chamber'
-      objectReference: {fileID: 0}
     - target: {fileID: 5670565329357182857, guid: 6dccd41c63859d94f9e9ed137070c50a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -58565,6 +58611,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5670565329432284391, guid: 6dccd41c63859d94f9e9ed137070c50a,
+        type: 3}
+      propertyPath: m_Text
+      value: '- Collect (4) mushrooms for The Facility
+
+
+        - Bring them back to 100 Lab for study
+
+
+        - Move onto next chamber'
       objectReference: {fileID: 0}
     - target: {fileID: 5670565331264364050, guid: 6dccd41c63859d94f9e9ed137070c50a,
         type: 3}
