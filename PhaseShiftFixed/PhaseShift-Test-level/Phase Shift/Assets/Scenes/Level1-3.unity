@@ -619,6 +619,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 1922850528949859041, guid: 0933e70225592f945a222875135b16cb, type: 3}
+--- !u!114 &33587979 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5670565329432284391, guid: 6dccd41c63859d94f9e9ed137070c50a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5670565330827796231}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &36067852 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3597825016591667236, guid: 0933e70225592f945a222875135b16cb,
@@ -1615,7 +1627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.5078125
+      value: -2.015625
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1623,7 +1635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2001.3164
+      value: 2001.1875
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -41349,7 +41361,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127290
+  m_Name: pb_Mesh24472
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49180,7 +49192,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Example text
 --- !u!1 &1704210272
 GameObject:
   m_ObjectHideFlags: 0
@@ -53616,6 +53628,51 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -6982158811335444364, guid: 0933e70225592f945a222875135b16cb, type: 3}
+--- !u!1 &1946310997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1946310999}
+  - component: {fileID: 1946310998}
+  m_Layer: 0
+  m_Name: HUD updater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1946310998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946310997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbdd30ad617256649a1a12ed18cab4b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notificationText: {fileID: 1697533040}
+  tasklistText: {fileID: 33587979}
+--- !u!4 &1946310999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946310997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.566649, y: 418.5758, z: 1998.2463}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1957658174 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4328734998916814298, guid: 0933e70225592f945a222875135b16cb,
@@ -58615,13 +58672,7 @@ PrefabInstance:
     - target: {fileID: 5670565329432284391, guid: 6dccd41c63859d94f9e9ed137070c50a,
         type: 3}
       propertyPath: m_Text
-      value: '- Collect (4) mushrooms for The Facility
-
-
-        - Bring them back to 100 Lab for study
-
-
-        - Move onto next chamber'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5670565331264364050, guid: 6dccd41c63859d94f9e9ed137070c50a,
         type: 3}
@@ -58721,7 +58772,7 @@ PrefabInstance:
     - target: {fileID: 5670565329637263747, guid: 6dccd41c63859d94f9e9ed137070c50a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7257280614888945406, guid: 6dccd41c63859d94f9e9ed137070c50a,
         type: 3}

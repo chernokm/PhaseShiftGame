@@ -44,6 +44,8 @@ public class DoorEvents : MonoBehaviour
     [SerializeField]
     private FirstPersonController fpsController;
 
+	//HUDupdater headsupUpdater = new HUDupdater();
+
     private void Awake()
     {
         hackingCanvas.enabled = false;
@@ -156,13 +158,15 @@ public class DoorEvents : MonoBehaviour
             interactText.text = "";
             Destroy(hackingTerminalTrigger);
             keycardAmount += 1;
-        }
+			//headsupUpdater.UpdateNotifications();
+		}
         else if (gameObject == greenKeycardTrigger)
         {
             Destroy(greenKeycard);
             interactText.text = "";
             Destroy(greenKeycardTrigger);
             keycardAmount += 1;
+			//headsupUpdater.UpdateNotifications();
         }
     }
 

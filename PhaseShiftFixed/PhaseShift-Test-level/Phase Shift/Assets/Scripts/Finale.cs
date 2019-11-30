@@ -66,7 +66,7 @@ public class Finale : MonoBehaviour
 		Mushroom2.SetActive(false);
 		Mushroom3.SetActive(false);
 		Mushroom4.SetActive(false);
-		TextPopup.SetActive(false);
+		TextPopup.SetActive(true);
 		speakerButton.enabled = false;
 		nameText.text = "";
 		audioSource = GetComponent<AudioSource>();
@@ -81,10 +81,10 @@ public class Finale : MonoBehaviour
 			Mushroom3.SetActive(true);
 			Mushroom4.SetActive(true);
 		}
-		else if(ItemEvents.mushroomAmount < 4)
-		{
-			TextPopup.SetActive(true);
-		}
+		//else if(ItemEvents.mushroomAmount < 4)
+		//{
+		//	TextPopup.SetActive(true);
+		//}
 	}
 
 	private void OnTriggerStay(Collider other)
@@ -94,6 +94,7 @@ public class Finale : MonoBehaviour
 			interactionText.text = "Press [ F ] to complete the chamber";
 			if (Input.GetButtonDown("Interact"))
 			{
+				isSelected = true;
 				Finish();
 			}
 		}
@@ -110,7 +111,6 @@ public class Finale : MonoBehaviour
 
 	private void Finish()
 	{
-		isSelected = true;
 		ItemEvents.mushroomAmount = 0;
 		interactionText.text = "";
 		if (lineCount == 0)
