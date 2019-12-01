@@ -51,18 +51,18 @@ public class Elevator : MonoBehaviour
 		speakerButton.enabled = true;
 		nameText.text = "";
 		subtitlesText.text = "";
-		notificationText.text = "Press [ESC] to skip cutscene";
 		audio = GetComponent<AudioSource>();
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
 		ElevatorScene();
+		notificationText.text = "Press [ESC] to skip cutscene";
 	}
 
 	private void OnTriggerStay(Collider other)
 	{
-		if(dialougeSkipped == false)
+		if (dialougeSkipped == false)
 		{
 			if (Input.GetButtonDown("Cancel"))
 			{

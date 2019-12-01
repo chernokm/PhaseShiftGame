@@ -14,6 +14,8 @@ public class PauseScreen : MonoBehaviour
 	[SerializeField]
 	private FirstPersonController fpsController;
 
+	//public static bool pauseScreenEnabled;
+
 	private void Awake()
 	{
 		pauseCanvas.enabled = false;
