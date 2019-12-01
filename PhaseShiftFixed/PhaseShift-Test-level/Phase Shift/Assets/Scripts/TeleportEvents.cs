@@ -29,6 +29,8 @@ public class TeleportEvents : MonoBehaviour
 
     public Image flash;
     public AudioSource teleportSound;
+	[SerializeField]
+	private AudioClip woodDoor;
 
     public bool teleportTriggerBool1 = false;
     public bool teleportTriggerBool2 = false;
@@ -56,12 +58,12 @@ public class TeleportEvents : MonoBehaviour
         }
         else if (gameObject == teleportTrigger3)
         {
-            interactText.text = "[ press F to Dimensional Travel ]";
+            interactText.text = "[ press F to Enter the temple ]";
             teleportTriggerBool3 = true;
         }
         else if (gameObject == teleportTrigger4)
         {
-            interactText.text = "[ press F to Dimensional Travel ]";
+            interactText.text = "[ press F to Exit the temple ]";
             teleportTriggerBool4 = true;
         }
         else if (gameObject == teleportTrigger5)
@@ -105,15 +107,15 @@ public class TeleportEvents : MonoBehaviour
             }
             else if (gameObject == teleportTrigger3)
             {
-                teleportSound.Play();
-                StartCoroutine(Flash());
+				teleportSound.PlayOneShot(woodDoor, 1);
+                //StartCoroutine(Flash());
                 Teleport();
             }
             else if (gameObject == teleportTrigger4)
             {
-                teleportSound.Play();
-                StartCoroutine(Flash());
-                Teleport();
+				teleportSound.PlayOneShot(woodDoor, 1);
+				//StartCoroutine(Flash());
+				Teleport();
             }
             else if (gameObject == teleportTrigger5)
             {

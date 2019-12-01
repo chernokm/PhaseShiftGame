@@ -25,6 +25,8 @@ public class DoorEvents : MonoBehaviour
 	public GameObject hackedNotification;
 
 	public AudioSource doorOpen;
+	[SerializeField]
+	private AudioClip itemPickup;
 
     public bool hTerminalTrigger = false;
     public bool hTerminalKeycardTrigger = false;
@@ -101,7 +103,6 @@ public class DoorEvents : MonoBehaviour
         else if (gameObject == greenKeycardTrigger)
         {
             interactText.text = "[ Press F to pick up the green keycard ]";
-            obtainedGreenKeycard = true;
         }
     }
 
@@ -162,7 +163,9 @@ public class DoorEvents : MonoBehaviour
 		}
         else if (gameObject == greenKeycardTrigger)
         {
-            Destroy(greenKeycard);
+			doorOpen.PlayOneShot(itemPickup,1);
+			obtainedGreenKeycard = true;
+			Destroy(greenKeycard);
             interactText.text = "";
             Destroy(greenKeycardTrigger);
             keycardAmount += 1;
@@ -172,7 +175,6 @@ public class DoorEvents : MonoBehaviour
 
     public void Open()
     {
-        
         if (gameObject == newLabDoorTrigger)
         {
             Destroy(newLabDoor);

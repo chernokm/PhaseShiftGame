@@ -42,9 +42,11 @@ public class ItemEvents : MonoBehaviour
     public GameObject mushroom4;
     public GameObject mushroom5;
 
-    //public GameObject keycard1;
-    //public GameObject keycard2;
+	//public GameObject keycard1;
+	//public GameObject keycard2;
 	#endregion
+
+	public AudioSource audio;
 
 	public GameObject thePlayer;
     public Text interactText;
@@ -163,16 +165,8 @@ public class ItemEvents : MonoBehaviour
         //    interactText.text = "[ Press F to pick up the keycard ]";
         //    obtainedGardenKeycard = true;
         //}
-        else if (gameObject == endingTrigger)
-        {
-            interactText.text = "YOU ESCAPED! THANKS FOR PLAYING!";
-        }
     }
 
-    void Update()
-    {
-        
-    }
     private void OnTriggerExit(Collider other)
     {
         interactText.text = "";
@@ -234,6 +228,7 @@ public class ItemEvents : MonoBehaviour
     {
         if (gameObject == mushroomTrigger1)
         {
+			audio.Play();
             Destroy(mushroom1);
             interactText.text = "";
             Destroy(mushroomTrigger1);
@@ -241,28 +236,32 @@ public class ItemEvents : MonoBehaviour
         }
         else if (gameObject == mushroomTrigger2)
         {
-            Destroy(mushroom2);
+			audio.Play();
+			Destroy(mushroom2);
             interactText.text = "";
             Destroy(mushroomTrigger2);
             mushroomAmount += 1;
         }
         else if (gameObject == mushroomTrigger3)
         {
-            Destroy(mushroom3);
+			audio.Play();
+			Destroy(mushroom3);
             interactText.text = "";
             Destroy(mushroomTrigger3);
             mushroomAmount += 1;
         }
         else if (gameObject == mushroomTrigger4)
         {
-            Destroy(mushroom4);
+			audio.Play();
+			Destroy(mushroom4);
             interactText.text = "";
             Destroy(mushroomTrigger4);
             mushroomAmount += 1;
         }
         else if (gameObject == mushroomTrigger5)
         {
-            Destroy(mushroom5);
+			audio.Play();
+			Destroy(mushroom5);
             interactText.text = "";
             Destroy(mushroomTrigger5);
             mushroomAmount += 1;
@@ -296,7 +295,6 @@ public class ItemEvents : MonoBehaviour
             Destroy(interiorLabDoor);
             interactText.text = "";
             Destroy(interiorLabDoorTrigger);
-            
         }
         else if (gameObject == gardenDoorTrigger)
         {
@@ -309,7 +307,6 @@ public class ItemEvents : MonoBehaviour
             Destroy(mainLabDoorL);
             Destroy(mainLabDoorR);
             interactText.text = "";
-
         }
     }
     
