@@ -44,6 +44,8 @@ public class Elevator : MonoBehaviour
 	private AudioClip doorOpen;
 	[SerializeField]
 	private AudioClip elevatorRide;
+	[SerializeField]
+	private AudioClip ding;
 
 	// Start is called before the first frame update
 	void Start()
@@ -77,14 +79,14 @@ public class Elevator : MonoBehaviour
 
 	private void OnTriggerExit(Collider other)
 	{
-		audio.Play();
+		//audio.Play();
 		Destroy(elevatorTrigger);
 		elevatorDoor.SetActive(true);
 	}
 
 	private void ElevatorScene()
 	{
-		audio.PlayOneShot(elevatorRide, 1);
+		//audio.PlayOneShot(elevatorRide, 1);
 		if (lineCount == 0)
 		{
 			duration = Alpha1.length;
@@ -129,10 +131,11 @@ public class Elevator : MonoBehaviour
 			nameText.text = "<b>Alpha:</b>";
 			subtitlesText.text = "And before you ask, again, no. We’re not talking about Epsilon, so stop asking about her. Good luck, Theta.";
 			StopCoroutine(WaitForSound());
+			//audio.Stop();
+			audio.PlayOneShot(ding, 1);
 		}
 		if (lineCount == 5)
 		{
-			audio.Stop();
 			audio.PlayOneShot(doorOpen, 1);
 			elevatorDoor.SetActive(false);
 			speakerButton.enabled = false;
