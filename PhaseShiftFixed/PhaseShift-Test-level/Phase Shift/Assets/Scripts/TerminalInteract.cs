@@ -37,12 +37,27 @@ public class TerminalInteract : MonoBehaviour
 	private Image audioplayer;
 	#endregion
 
+	private AudioSource audioSource;
+	[SerializeField]
+	private AudioClip buttonClick;
+	[SerializeField]
+	private AudioClip keyboardType;
+
 	[SerializeField]
 	private FirstPersonController fpsController;
 
-	private void Awake()
+	private void Start()
 	{
 		terminalCanvas.enabled = false;
+		audioSource = GetComponent<AudioSource>();
+	}
+
+	private void Update()
+	{
+		if (Input.GetButtonDown("Cancel"))
+		{
+			CloseTerminal();
+		}
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -70,6 +85,7 @@ public class TerminalInteract : MonoBehaviour
 		fpsController.enabled = false;
 		Cursor.visible = true;
 		Cursor.lockState = CursorLockMode.None;
+		audioSource.PlayOneShot(keyboardType, 1);
 	}
 
 	public void CloseTerminal()
@@ -91,6 +107,7 @@ public class TerminalInteract : MonoBehaviour
 
 	public void MushroomLog1()
 	{
+		audioSource.PlayOneShot(buttonClick, 1);
 		TitleboxMushroom.enabled = true;
 		descBoxBGMushroom.enabled = true;
 		headerTextMushroom.text = "Mushroom log #1";
@@ -99,6 +116,7 @@ public class TerminalInteract : MonoBehaviour
 
 	public void MushroomLog2()
 	{
+		audioSource.PlayOneShot(buttonClick, 1);
 		TitleboxMushroom.enabled = true;
 		descBoxBGMushroom.enabled = true;
 		headerTextMushroom.text = "Mushroom log #2";
@@ -116,6 +134,7 @@ public class TerminalInteract : MonoBehaviour
 
 	public void EpislonLog1()
 	{
+		audioSource.PlayOneShot(buttonClick, 1);
 		TitleboxEpsilon.enabled = true;
 		descBoxBGEpsilon.enabled = true;
 		audioplayer.enabled = true;

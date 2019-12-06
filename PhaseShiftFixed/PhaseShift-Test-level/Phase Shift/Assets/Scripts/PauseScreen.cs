@@ -14,6 +14,8 @@ public class PauseScreen : MonoBehaviour
 	[SerializeField]
 	private FirstPersonController fpsController;
 
+	//public static bool pauseScreenEnabled;
+
 	private void Awake()
 	{
 		pauseCanvas.enabled = false;
@@ -26,7 +28,7 @@ public class PauseScreen : MonoBehaviour
 
 	private void CheckIfPaused()
 	{
-		if (Input.GetButtonDown("Cancel"))
+		if (Input.GetButtonDown("TabOut"))
 		{
 			hudCanvas.enabled = false;
 			pauseCanvas.enabled = true;
