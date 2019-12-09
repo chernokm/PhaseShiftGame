@@ -41,6 +41,8 @@ public class DoorEvents : MonoBehaviour
     public Text interactText;
     public Canvas HUDcanvas;
     public Canvas hackingCanvas;
+	public Image greenKeyCardIcon;
+	public Image redKeyCardIcon;
 
     //public GameObject thePlayer;
     [SerializeField]
@@ -52,6 +54,8 @@ public class DoorEvents : MonoBehaviour
     {
         hackingCanvas.enabled = false;
 		hackedNotification.SetActive(false);
+		greenKeyCardIcon.enabled = false;
+		redKeyCardIcon.enabled = false;
     }
 
 	private void OnTriggerEnter(Collider other)
@@ -142,11 +146,13 @@ public class DoorEvents : MonoBehaviour
             {
                 Open();
 				keycardAmount--;
+				redKeyCardIcon.enabled = false;
             }
             else if (gameObject == gardenDoorTrigger && obtainedGreenKeycard == true)
             {
                 Open();
 				keycardAmount--;
+				greenKeyCardIcon.enabled = false;
             }
         }
     }
@@ -159,6 +165,7 @@ public class DoorEvents : MonoBehaviour
             interactText.text = "";
             Destroy(hackingTerminalTrigger);
             keycardAmount += 1;
+			redKeyCardIcon.enabled = true;
 			//headsupUpdater.UpdateNotifications();
 		}
         else if (gameObject == greenKeycardTrigger)
@@ -169,6 +176,7 @@ public class DoorEvents : MonoBehaviour
             interactText.text = "";
             Destroy(greenKeycardTrigger);
             keycardAmount += 1;
+			greenKeyCardIcon.enabled = true;
 			//headsupUpdater.UpdateNotifications();
         }
     }
