@@ -15,9 +15,12 @@ public class MainMenu : MonoBehaviour
 
 	private bool clickStart;
 
+	private AudioSource audioSource;
+
 	// Start is called before the first frame update
 	void Start()
 	{
+		audioSource = GetComponent<AudioSource>();
 		StartCoroutine(PhaseChange());
 		thetaAlt.enabled = false;
 		flash.enabled = false;
@@ -25,7 +28,7 @@ public class MainMenu : MonoBehaviour
 
 	public void StartGame()
 	{
-		SceneManager.LoadScene(1);
+		StartCoroutine("Countdown");
 	}
 
 	public void QuitGame()
@@ -58,7 +61,14 @@ public class MainMenu : MonoBehaviour
 	IEnumerator Flash()
 	{
 		flash.enabled = true;
+		audioSource.Play();
 		yield return new WaitForSeconds(0.02f);
 		flash.enabled = false;
+	}
+
+	private IEnumerator Countdown()
+	{
+		yield return new WaitForSeconds(3);
+		SceneManager.LoadScene(1);
 	}
 }
