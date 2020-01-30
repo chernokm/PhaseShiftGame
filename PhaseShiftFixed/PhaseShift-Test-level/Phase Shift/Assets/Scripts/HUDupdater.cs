@@ -44,21 +44,21 @@ public class HUDupdater : MonoBehaviour
 		}
 	}
 
-	//private void UpdateTasklist()
-	//{
-	//	if(ItemEvents.mushroomAmount < 4 && finalupdater.isSelected == false)
-	//	{
-	//		tasklistText.text = "- Collect (4) mushrooms for The Facility" + "\n" + "\n" + "- Bring samples back to 100 Lab tray" + "\n" + "\n" + "- Move to exit";
-	//	}
-	//	else if (ItemEvents.mushroomAmount == 4 && finalupdater.isSelected == false)
-	//	{
-	//		tasklistText.text = "- Bring samples back to 100 Lab tray" + "\n" + "\n" + "- Move to exit";
-	//	}
-	//	else if (finalupdater.isSelected == true)
-	//	{
-	//		tasklistText.text = "";
-	//	}
-	//}
+	private void UpdateTasklist()
+	{
+		if (ItemEvents.mushroomAmount < 4 && finalupdater.isSelected == false)
+		{
+			tasklistText.text = "- Collect (4) mushrooms for The Facility" + "\n" + "\n" + "- Bring samples back to 100 Lab tray" + "\n" + "\n" + "- Move to exit";
+		}
+		else if (ItemEvents.mushroomAmount == 4 && finalupdater.isSelected == false)
+		{
+			tasklistText.text = "- Bring samples back to 100 Lab tray" + "\n" + "\n" + "- Move to exit";
+		}
+		else if (finalupdater.isSelected == true)
+		{
+			tasklistText.text = "";
+		}
+	}
 
 	IEnumerator WaitForTime()
 	{

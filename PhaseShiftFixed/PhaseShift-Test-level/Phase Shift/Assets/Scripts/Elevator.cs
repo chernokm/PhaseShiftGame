@@ -129,7 +129,7 @@ public class Elevator : MonoBehaviour
 			StartCoroutine(WaitForSound());
 			audio.PlayOneShot(Alpha5, 1);
 			nameText.text = "<b>Alpha:</b>";
-			subtitlesText.text = "And before you ask, again, no. We’re not talking about Epsilon, so stop asking about her. Good luck, Theta.";
+			subtitlesText.text = "And before you ask, again, no. We’re not talking about Epsilon, so stop asking about her. Good luck out there, Theta.";
 			StopCoroutine(WaitForSound());
 			//audio.Stop();
 			audio.PlayOneShot(ding, 1);

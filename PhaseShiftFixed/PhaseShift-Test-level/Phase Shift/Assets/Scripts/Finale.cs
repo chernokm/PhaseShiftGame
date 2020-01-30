@@ -52,9 +52,6 @@ public class Finale : MonoBehaviour
 	private AudioClip alpha4;
 	#endregion
 
-	[SerializeField]
-	private GameObject TextPopup;
-
 	private int lineCount;
 	private float duration;
 
@@ -66,7 +63,6 @@ public class Finale : MonoBehaviour
 		Mushroom2.SetActive(false);
 		Mushroom3.SetActive(false);
 		Mushroom4.SetActive(false);
-		TextPopup.SetActive(true);
 		speakerButton.enabled = false;
 		nameText.text = "";
 		audioSource = GetComponent<AudioSource>();
