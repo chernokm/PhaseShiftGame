@@ -14,7 +14,7 @@ public class Dimensions : MonoBehaviour
     public static bool dimensionTriggerInterior = false;
 
     public GameObject thePlayer;
-    public GameObject dimensionText;
+    //public GameObject dimensionText;
 
     void OnTriggerEnter(Collider other)
     {
@@ -23,39 +23,39 @@ public class Dimensions : MonoBehaviour
             dimensionTriggerExterior = true;
             dimensionTriggerInterior = false;
             dimensionTriggerLab = false;
-            Shift();
+            //Shift();
         }
         else if (gameObject == dimensionLab)
         {
             dimensionTriggerExterior = false;
             dimensionTriggerInterior = false;
             dimensionTriggerLab = true;
-            Shift();
+            //Shift();
         }
         else if (gameObject == dimensionInterior)
         {
             dimensionTriggerExterior = false;
             dimensionTriggerInterior = true;
             dimensionTriggerLab = false;
-            Shift();
+            //Shift();
         }
     }
 
-    public void Shift()
-    {
-        if (dimensionTriggerExterior == true)
-        {
-            dimensionText.GetComponent<Text>().text = "Dimension 225";
-        }
-        else if (dimensionTriggerInterior == true)
-        {
-            dimensionText.GetComponent<Text>().text = "Dimension 225";
-        }
-        else if (dimensionTriggerLab)
-        {
-            dimensionText.GetComponent<Text>().text = "Dimension 100";
-        }
-    }
+    //public void Shift()
+    //{
+    //    if (dimensionTriggerExterior == true)
+    //    {
+    //        dimensionText.GetComponent<Text>().text = "Dimension 225";
+    //    }
+    //    else if (dimensionTriggerInterior == true)
+    //    {
+    //        dimensionText.GetComponent<Text>().text = "Dimension 225";
+    //    }
+    //    else if (dimensionTriggerLab)
+    //    {
+    //        dimensionText.GetComponent<Text>().text = "Dimension 100";
+    //    }
+    //}
 
 
 }

@@ -6,63 +6,43 @@ using UnityEngine.UI;
 public class HUDupdater : MonoBehaviour
 {
 	[SerializeField]
-	private Text notificationText;
+	private Text primaryObjectiveText;
 	[SerializeField]
-	private Text tasklistText;
-
-	private bool hasRedCard;
-	private bool hasGreenCard;
-	Finale finalupdater = new Finale();
+	private Text primaryObjectiveNumber;
 
 	private void Start()
 	{
-		notificationText.text = "";
-		tasklistText.text = "- Collect (4) mushrooms for The Facility" + "\n" + "\n" + "- Bring samples back to 100 Lab tray" + "\n" + "\n" + "- Move to exit";
+		primaryObjectiveText.text = "Zetamelaphin Mushrooms";
+		primaryObjectiveNumber.text = "0/4";
 	}
 
 	private void Update()
 	{
-		//UpdateTasklist();
-		UpdateNotifications();
+		UpdateObjectives();
 	}
 
-	public void UpdateNotifications()
+	private void UpdateObjectives()
 	{
-		if(DoorEvents.obtainedRedKeycard == true && hasRedCard == false)
+		if(ItemEvents.mushroomAmount == 0)
 		{
-			StartCoroutine(WaitForTime());
-			notificationText.text = "<b>RED Keycard</b> obtained";
-			hasRedCard = true;
-			StopCoroutine(WaitForTime());
+			primaryObjectiveNumber.text = "0/4";
 		}
-		else if (DoorEvents.obtainedGreenKeycard == true && hasGreenCard == false)
+		else if (ItemEvents.mushroomAmount == 1)
 		{
-			StartCoroutine(WaitForTime());
-			notificationText.text = "<b>GREEN Keycard</b> obtained";
-			hasGreenCard = true;
-			StopCoroutine(WaitForTime());
+			primaryObjectiveNumber.text = "1/4";
 		}
-	}
-
-	private void UpdateTasklist()
-	{
-		if (ItemEvents.mushroomAmount < 4 && finalupdater.isSelected == false)
+		else if (ItemEvents.mushroomAmount == 2)
 		{
-			tasklistText.text = "- Collect (4) mushrooms for The Facility" + "\n" + "\n" + "- Bring samples back to 100 Lab tray" + "\n" + "\n" + "- Move to exit";
+			primaryObjectiveNumber.text = "2/4";
 		}
-		else if (ItemEvents.mushroomAmount == 4 && finalupdater.isSelected == false)
+		else if (ItemEvents.mushroomAmount == 3)
 		{
-			tasklistText.text = "- Bring samples back to 100 Lab tray" + "\n" + "\n" + "- Move to exit";
+			primaryObjectiveNumber.text = "3/4";
 		}
-		else if (finalupdater.isSelected == true)
+		else if (ItemEvents.mushroomAmount == 4)
 		{
-			tasklistText.text = "";
+			primaryObjectiveNumber.text = "4/4";
 		}
 	}
 
-	IEnumerator WaitForTime()
-	{
-		yield return new WaitForSeconds(3);
-		notificationText.text = "";
-	}
 }
