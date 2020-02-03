@@ -41,7 +41,8 @@ public class HUDupdater : MonoBehaviour
 		}
 		else if (ItemEvents.mushroomAmount == 4)
 		{
-			primaryObjectiveNumber.text = "4/4";
+			primaryObjectiveText.text = "Objective Complete - Return to base";
+			primaryObjectiveNumber.text = "";
 		}
 	}
 
