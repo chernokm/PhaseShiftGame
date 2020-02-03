@@ -28,7 +28,7 @@ public class PauseScreen : MonoBehaviour
 
 	private void CheckIfPaused()
 	{
-		if (Input.GetButtonDown("TabOut"))
+		if (Input.GetButtonDown("Cancel"))
 		{
 			hudCanvas.enabled = false;
 			pauseCanvas.enabled = true;
