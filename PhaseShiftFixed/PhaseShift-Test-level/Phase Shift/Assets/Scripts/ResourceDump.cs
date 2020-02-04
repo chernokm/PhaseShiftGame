@@ -62,7 +62,7 @@ public class ResourceDump : MonoBehaviour
 		}
 		else
 		{
-			interactionText.text = "";
+			interactionText.text = "This is where I'd deposit my samples.";
 		}
 	}
 
