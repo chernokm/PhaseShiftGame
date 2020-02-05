@@ -22,7 +22,7 @@ public class DoorEvents : MonoBehaviour
     public GameObject greenKeycardTrigger;
 
     public GameObject glass;
-	public GameObject hackedNotification;
+	//public GameObject hackedNotification;
 
 	public AudioSource doorOpen;
 	[SerializeField]
@@ -40,7 +40,7 @@ public class DoorEvents : MonoBehaviour
 
     public Text interactText;
     public Canvas HUDcanvas;
-    public Canvas hackingCanvas;
+    //public Canvas hackingCanvas;
 	public Image greenKeyCardIcon;
 	public Image redKeyCardIcon;
 
@@ -52,32 +52,27 @@ public class DoorEvents : MonoBehaviour
 
     private void Awake()
     {
-        hackingCanvas.enabled = false;
-		hackedNotification.SetActive(false);
-		greenKeyCardIcon.enabled = false;
-		redKeyCardIcon.enabled = false;
+        //hackingCanvas.enabled = false;
+		//hackedNotification.SetActive(false);
+		//greenKeyCardIcon.enabled = false;
+		//redKeyCardIcon.enabled = false;
     }
 
 	private void OnTriggerEnter(Collider other)
     {
-        if (gameObject == hackingTerminalTrigger)
-        {
-            if (terminalHacked == true)
-            {
-                interactText.text = "[ Press F to pick up red keycard ]";
-                obtainedRedKeycard = true;
-            }
-            else if (terminalHacked == false)
-            {
-                interactText.text = "[ Press F to hack this terminal ]";
-            }
-            
-        }
-        else if (gameObject == hackingTerminalKeycardTrigger)
-        {
-            // DONT NEED
-        }
-        else if (gameObject == newLabDoorTrigger)
+        //if (gameObject == hackingTerminalTrigger)
+        //{
+        //    if (terminalHacked == true)
+        //    {
+        //        interactText.text = "[ Press F to pick up red keycard ]";
+        //        obtainedRedKeycard = true;
+        //    }
+        //    else if (terminalHacked == false)
+        //    {
+        //        interactText.text = "[ Press F to hack this terminal ]";
+        //    } 
+        //}
+        if (gameObject == newLabDoorTrigger)
         {
             if (obtainedRedKeycard == false)
             {
@@ -128,20 +123,19 @@ public class DoorEvents : MonoBehaviour
                 Pickup();
                 //keycardAmount += 1;
             }
-            else if (gameObject == hackingTerminalTrigger)
-            {
-                if (terminalHacked == true)
-                {
-                    Pickup();
-                    obtainedRedKeycard = true;
-                    //keycardAmount += 1;
-                }
-                else if (terminalHacked == false)
-                {
-                    Hacking();
-                }
-                
-            }
+            //else if (gameObject == hackingTerminalTrigger)
+            //{
+            //    if (terminalHacked == true)
+            //    {
+            //        Pickup();
+            //        obtainedRedKeycard = true;
+            //        //keycardAmount += 1;
+            //    }
+            //    else if (terminalHacked == false)
+            //    {
+            //        Hacking();
+            //    }
+            //}
             else if (gameObject == newLabDoorTrigger && obtainedRedKeycard == true)
             {
                 Open();
@@ -159,16 +153,16 @@ public class DoorEvents : MonoBehaviour
 
     public void Pickup()
     {
-        if (gameObject == hackingTerminalTrigger)
-        {
-            Destroy(redKeycard);
-            interactText.text = "";
-            Destroy(hackingTerminalTrigger);
-            keycardAmount += 1;
-			redKeyCardIcon.enabled = true;
-			//headsupUpdater.UpdateNotifications();
-		}
-        else if (gameObject == greenKeycardTrigger)
+  //      if (gameObject == hackingTerminalTrigger)
+  //      {
+  //          Destroy(redKeycard);
+  //          interactText.text = "";
+  //          Destroy(hackingTerminalTrigger);
+  //          keycardAmount += 1;
+		//	redKeyCardIcon.enabled = true;
+		//	//headsupUpdater.UpdateNotifications();
+		//}
+        if (gameObject == greenKeycardTrigger)
         {
 			doorOpen.PlayOneShot(itemPickup,1);
 			obtainedGreenKeycard = true;
@@ -200,34 +194,34 @@ public class DoorEvents : MonoBehaviour
         }
     }
 
-    public void Hacking()
-    {
-        if (gameObject == hackingTerminalTrigger)
-        {
-			hackingCanvas.enabled = true;
-			HUDcanvas.enabled = false;
-			fpsController.enabled = false;
-			Cursor.visible = true;
-			Cursor.lockState = CursorLockMode.None;
-			terminalHacked = true;
-			hackedNotification.SetActive(true);
-			interactText.text = "[ Press F to pick up red keycard ]";
-			Destroy(glass);
+   // public void Hacking()
+   // {
+   //     if (gameObject == hackingTerminalTrigger)
+   //     {
+			//hackingCanvas.enabled = true;
+			//HUDcanvas.enabled = false;
+			//fpsController.enabled = false;
+			//Cursor.visible = true;
+			//Cursor.lockState = CursorLockMode.None;
+			//terminalHacked = true;
+			//hackedNotification.SetActive(true);
+			//interactText.text = "[ Press F to pick up red keycard ]";
+			//Destroy(glass);
 
-			//if(Minigame.isIncomplete == false)
-			//{
+			////if(Minigame.isIncomplete == false)
+			////{
 
-			//}
-			//else if (Minigame.isIncomplete == true)
-			//{
-			//	hackingCanvas.enabled = true;
-			//	HUDcanvas.enabled = false;
-			//	fpsController.enabled = false;
-			//	Cursor.visible = true;
-			//	Cursor.lockState = CursorLockMode.None;
-			//	terminalHacked = false;
-			//}
-        }
-    }
+			////}
+			////else if (Minigame.isIncomplete == true)
+			////{
+			////	hackingCanvas.enabled = true;
+			////	HUDcanvas.enabled = false;
+			////	fpsController.enabled = false;
+			////	Cursor.visible = true;
+			////	Cursor.lockState = CursorLockMode.None;
+			////	terminalHacked = false;
+			////}
+   //     }
+   // }
 
 }

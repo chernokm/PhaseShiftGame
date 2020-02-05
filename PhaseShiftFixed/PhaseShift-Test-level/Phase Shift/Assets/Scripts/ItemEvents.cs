@@ -64,78 +64,7 @@ public class ItemEvents : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
     {
-        //if (gameObject == guardianInteractTrigger)
-        //{
-        //    if (mushroomAmount == 0 && talkedToGuardian == false)
-        //    {
-        //        interactText.text = "Collect [ 5 ] mushrooms for me and I will give you the keycard your Facility requires.";
-        //        talkedToGuardian = true;
-        //        Destroy(interiorDoor);
-        //        //obtainedGardenKeycard = true;
-        //        //obtainedInteriorLabKeycard = true;
-        //    }
-        //    else if (mushroomAmount >= 0 && mushroomAmount < 5 && talkedToGuardian == true)
-        //    {
-        //        interactText.text = "You do not have enough mushrooms yet. Come back when you have [ 5 ].";
-        //    }
-        //    else if (mushroomAmount >= 5 && talkedToGuardian == true)
-        //    {
-        //        interactText.text = "Thanks for the mushrooms! Here's that keycard I promised.";
-        //        obtainedGuardianKeycard = true;
-        //        keycardAmount += 1;
-        //        mushroomAmount = 0;
-        //    }
-        //}
-        if (gameObject == miniGuardianTrigger)
-        {
-            if (talkedToGuardian == false)
-            {
-                interactText.text = "This statue stares at you with absent eyes.";
-            }
-            //else if (talkedToGuardian == true)
-            //{
-            //    interactText.text = "Oh, you talked to the Guardian now? Great! Welcome to my maze!";
-            //    Destroy(mazeDoor);
-                
-            //}
-        }
-        else if (gameObject == labDoorTrigger)
-        {
-            if (obtainedGuardianKeycard == false)
-            {
-                interactText.text = "This door's the way out. I need to finish my Tasks first.";
-            }
-            else if (obtainedGuardianKeycard == true)
-            {
-                interactText.text = "[ Press F to open the door ]";
-            }
-            
-        }
-        else if (gameObject == interiorLabDoorTrigger)
-        {
-            if (obtainedInteriorLabKeycard == false)
-            {
-                interactText.text = "You need the RED Keycard to open this door.";
-            }
-            else if (obtainedInteriorLabKeycard == true)
-            {
-                interactText.text = "[ Press F to use the keycard ]";
-				//keycardAmount -= 1;
-            }
-        }
-        else if (gameObject == gardenDoorTrigger)
-        {
-            if (obtainedGardenKeycard == false)
-            {
-                interactText.text = "You need the GREEN Keycard to open this door.";
-            }
-            else if (obtainedGardenKeycard == true)
-            {
-                interactText.text = "[ Press F to use the keycard ]";
-				//keycardAmount -= 1;
-			}
-        }
-        else if (gameObject == mushroomTrigger1)
+		if (gameObject == mushroomTrigger1)
         {
             interactText.text = "[ Press F to pick up the mushroom ]";
         }
@@ -155,16 +84,6 @@ public class ItemEvents : MonoBehaviour
         {
             interactText.text = "[ Press F to pick up the mushroom ]";
         }
-        //else if (gameObject == keycardTrigger1)
-        //{
-        //    interactText.text = "[ Press F to pick up the keycard ]";
-        //    obtainedInteriorLabKeycard = true;
-        //}
-        //else if (gameObject == keycardTrigger2)
-        //{
-        //    interactText.text = "[ Press F to pick up the keycard ]";
-        //    obtainedGardenKeycard = true;
-        //}
     }
 
     private void OnTriggerExit(Collider other)
