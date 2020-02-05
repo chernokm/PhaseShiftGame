@@ -60,6 +60,11 @@ public class DoorEvents : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
     {
+        ShowUIText();
+    }
+
+    public void ShowUIText()
+    {
         if (gameObject == hackingTerminalTrigger)
         {
             if (terminalHacked == true)
@@ -71,7 +76,7 @@ public class DoorEvents : MonoBehaviour
             {
                 interactText.text = "[ Press F to hack this terminal ]";
             }
-            
+
         }
         else if (gameObject == hackingTerminalKeycardTrigger)
         {
@@ -111,6 +116,11 @@ public class DoorEvents : MonoBehaviour
     }
 
     void OnTriggerExit(Collider other)
+    {
+        EmptyInteractText();
+    }
+
+    public void EmptyInteractText()
     {
         interactText.text = "";
     }
