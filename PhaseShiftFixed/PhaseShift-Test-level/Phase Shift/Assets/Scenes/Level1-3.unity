@@ -939,7 +939,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh271770
+  m_Name: pb_Mesh23922
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1452,7 +1452,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &91549240
 AudioSource:
@@ -1565,6 +1565,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.34375
@@ -1624,6 +1632,10 @@ PrefabInstance:
     - target: {fileID: 8200000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Volume
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
@@ -8299,7 +8311,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &161005279 stripped
 GameObject:
@@ -8742,7 +8754,7 @@ RectTransform:
   m_Children:
   - {fileID: 1465656048}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9026,6 +9038,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom_1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
@@ -9577,135 +9594,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 8268412853991790750, guid: 0933e70225592f945a222875135b16cb, type: 3}
---- !u!1 &233106870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 233106871}
-  - component: {fileID: 233106875}
-  - component: {fileID: 233106874}
-  - component: {fileID: 233106873}
-  - component: {fileID: 233106872}
-  m_Layer: 0
-  m_Name: mushroomInteractTrigger5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &233106871
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233106870}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 127.54515, y: -42.9321, z: -1.876831}
-  m_LocalScale: {x: 1, y: 2.4, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1287635557}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &233106872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233106870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0164aa81b2fd0274e8742272966a3665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guardianInteractTrigger: {fileID: 0}
-  miniGuardianTrigger: {fileID: 0}
-  labDoorTrigger: {fileID: 231966737}
-  interiorLabDoorTrigger: {fileID: 0}
-  gardenDoorTrigger: {fileID: 0}
-  endingTrigger: {fileID: 0}
-  interiorLabDoor: {fileID: 0}
-  mainLabDoorL: {fileID: 0}
-  mainLabDoorR: {fileID: 0}
-  gardenDoor: {fileID: 0}
-  mazeDoor: {fileID: 0}
-  mushroomTrigger1: {fileID: 0}
-  mushroomTrigger2: {fileID: 0}
-  mushroomTrigger3: {fileID: 0}
-  mushroomTrigger4: {fileID: 0}
-  mushroomTrigger5: {fileID: 233106870}
-  mushroom1: {fileID: 0}
-  mushroom2: {fileID: 0}
-  mushroom3: {fileID: 0}
-  mushroom4: {fileID: 0}
-  mushroom5: {fileID: 404876118}
-  audio: {fileID: 1317985352}
-  thePlayer: {fileID: 1816455746}
-  interactText: {fileID: 406836730}
---- !u!65 &233106873
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233106870}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &233106874
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233106870}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &233106875
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233106870}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &238323003
 GameObject:
   m_ObjectHideFlags: 0
@@ -11629,7 +11517,7 @@ RectTransform:
   - {fileID: 1872565249}
   - {fileID: 1015837542}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12206,6 +12094,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom_5
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
@@ -17915,7 +17808,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh271182
+  m_Name: pb_Mesh23346
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18117,7 +18010,7 @@ Transform:
   - {fileID: 1063068745}
   - {fileID: 404876119}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358307356
 GameObject:
@@ -19527,6 +19420,56 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 301504317}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &404876122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404876118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0164aa81b2fd0274e8742272966a3665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guardianInteractTrigger: {fileID: 0}
+  miniGuardianTrigger: {fileID: 0}
+  labDoorTrigger: {fileID: 231966737}
+  interiorLabDoorTrigger: {fileID: 0}
+  gardenDoorTrigger: {fileID: 0}
+  endingTrigger: {fileID: 0}
+  interiorLabDoor: {fileID: 0}
+  mainLabDoorL: {fileID: 0}
+  mainLabDoorR: {fileID: 0}
+  gardenDoor: {fileID: 0}
+  mazeDoor: {fileID: 0}
+  mushroomTrigger1: {fileID: 0}
+  mushroomTrigger2: {fileID: 0}
+  mushroomTrigger3: {fileID: 0}
+  mushroomTrigger4: {fileID: 0}
+  mushroomTrigger5: {fileID: 0}
+  mushroom1: {fileID: 0}
+  mushroom2: {fileID: 0}
+  mushroom3: {fileID: 0}
+  mushroom4: {fileID: 0}
+  mushroom5: {fileID: 404876118}
+  audio: {fileID: 1317985352}
+  thePlayer: {fileID: 1816455746}
+  interactText: {fileID: 406836730}
+--- !u!64 &404876123
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404876118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 3555201137979064246, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f, type: 3}
 --- !u!114 &406836730 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2734764618049414162, guid: 6dccd41c63859d94f9e9ed137070c50a,
@@ -25359,7 +25302,7 @@ Transform:
   - {fileID: 366131378}
   - {fileID: 1864564794}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &646519772 stripped
 GameObject:
@@ -25373,7 +25316,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh269878
+  m_Name: pb_Mesh22024
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25647,7 +25590,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh272090
+  m_Name: pb_Mesh24254
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25854,7 +25797,7 @@ Transform:
   - {fileID: 1272432732}
   - {fileID: 308328463}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &677098915 stripped
 GameObject:
@@ -26062,7 +26005,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270596
+  m_Name: pb_Mesh22756
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26548,7 +26491,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270088
+  m_Name: pb_Mesh22246
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26832,7 +26775,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh272386
+  m_Name: pb_Mesh24552
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28551,7 +28494,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270376
+  m_Name: pb_Mesh22536
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29427,7 +29370,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &850548195
 PrefabInstance:
@@ -29484,7 +29427,7 @@ PrefabInstance:
     - target: {fileID: 4309859326300824232, guid: 549a63dbea4bebe40b319b2c61d69513,
         type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 4309859326300824232, guid: 549a63dbea4bebe40b319b2c61d69513,
         type: 3}
@@ -30530,7 +30473,7 @@ Transform:
   - {fileID: 830257871}
   - {fileID: 1550821080}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &878711459
 GameObject:
@@ -31061,7 +31004,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &914501296 stripped
 GameObject:
@@ -31277,7 +31220,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270150
+  m_Name: pb_Mesh22308
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31498,7 +31441,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh272196
+  m_Name: pb_Mesh24360
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31661,6 +31604,56 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1261225884}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &955919847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955919844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0164aa81b2fd0274e8742272966a3665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guardianInteractTrigger: {fileID: 0}
+  miniGuardianTrigger: {fileID: 0}
+  labDoorTrigger: {fileID: 231966737}
+  interiorLabDoorTrigger: {fileID: 0}
+  gardenDoorTrigger: {fileID: 0}
+  endingTrigger: {fileID: 0}
+  interiorLabDoor: {fileID: 0}
+  mainLabDoorL: {fileID: 0}
+  mainLabDoorR: {fileID: 0}
+  gardenDoor: {fileID: 0}
+  mazeDoor: {fileID: 0}
+  mushroomTrigger1: {fileID: 0}
+  mushroomTrigger2: {fileID: 0}
+  mushroomTrigger3: {fileID: 0}
+  mushroomTrigger4: {fileID: 0}
+  mushroomTrigger5: {fileID: 0}
+  mushroom1: {fileID: 0}
+  mushroom2: {fileID: 0}
+  mushroom3: {fileID: 0}
+  mushroom4: {fileID: 955919844}
+  mushroom5: {fileID: 0}
+  audio: {fileID: 1317985352}
+  thePlayer: {fileID: 1816455746}
+  interactText: {fileID: 406836730}
+--- !u!64 &955919848
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955919844}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 3555201137979064246, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f, type: 3}
 --- !u!1 &974164008 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4810979284675340978, guid: 0933e70225592f945a222875135b16cb,
@@ -36440,6 +36433,56 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 216141254}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &977788642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977788639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0164aa81b2fd0274e8742272966a3665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guardianInteractTrigger: {fileID: 0}
+  miniGuardianTrigger: {fileID: 0}
+  labDoorTrigger: {fileID: 231966737}
+  interiorLabDoorTrigger: {fileID: 0}
+  gardenDoorTrigger: {fileID: 0}
+  endingTrigger: {fileID: 0}
+  interiorLabDoor: {fileID: 0}
+  mainLabDoorL: {fileID: 0}
+  mainLabDoorR: {fileID: 0}
+  gardenDoor: {fileID: 0}
+  mazeDoor: {fileID: 0}
+  mushroomTrigger1: {fileID: 0}
+  mushroomTrigger2: {fileID: 0}
+  mushroomTrigger3: {fileID: 0}
+  mushroomTrigger4: {fileID: 0}
+  mushroomTrigger5: {fileID: 0}
+  mushroom1: {fileID: 977788639}
+  mushroom2: {fileID: 0}
+  mushroom3: {fileID: 0}
+  mushroom4: {fileID: 0}
+  mushroom5: {fileID: 0}
+  audio: {fileID: 1317985352}
+  thePlayer: {fileID: 1816455746}
+  interactText: {fileID: 406836730}
+--- !u!64 &977788643
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977788639}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 3555201137979064246, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f, type: 3}
 --- !u!1 &979974871
 GameObject:
   m_ObjectHideFlags: 0
@@ -36520,7 +36563,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-129992
+  m_Name: pb_Mesh22964
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -36717,143 +36760,13 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -60930337204638305, guid: 0933e70225592f945a222875135b16cb, type: 3}
---- !u!1 &986621171
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 986621172}
-  - component: {fileID: 986621176}
-  - component: {fileID: 986621175}
-  - component: {fileID: 986621174}
-  - component: {fileID: 986621173}
-  m_Layer: 0
-  m_Name: mushroomInteractTrigger3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &986621172
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 986621171}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 143.76218, y: -37.80194, z: -12.069824}
-  m_LocalScale: {x: 3.5, y: 3.47, z: 3.5}
-  m_Children: []
-  m_Father: {fileID: 1287635557}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &986621173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 986621171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0164aa81b2fd0274e8742272966a3665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guardianInteractTrigger: {fileID: 0}
-  miniGuardianTrigger: {fileID: 0}
-  labDoorTrigger: {fileID: 231966737}
-  interiorLabDoorTrigger: {fileID: 0}
-  gardenDoorTrigger: {fileID: 0}
-  endingTrigger: {fileID: 0}
-  interiorLabDoor: {fileID: 0}
-  mainLabDoorL: {fileID: 0}
-  mainLabDoorR: {fileID: 0}
-  gardenDoor: {fileID: 0}
-  mazeDoor: {fileID: 0}
-  mushroomTrigger1: {fileID: 0}
-  mushroomTrigger2: {fileID: 0}
-  mushroomTrigger3: {fileID: 986621171}
-  mushroomTrigger4: {fileID: 0}
-  mushroomTrigger5: {fileID: 0}
-  mushroom1: {fileID: 0}
-  mushroom2: {fileID: 0}
-  mushroom3: {fileID: 2033962419}
-  mushroom4: {fileID: 0}
-  mushroom5: {fileID: 0}
-  audio: {fileID: 1317985352}
-  thePlayer: {fileID: 1816455746}
-  interactText: {fileID: 406836730}
---- !u!136 &986621174
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 986621171}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!23 &986621175
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 986621171}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &986621176
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 986621171}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!43 &990077205
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-134630
+  m_Name: pb_Mesh24178
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37112,7 +37025,7 @@ Transform:
   - {fileID: 1959546981}
   - {fileID: 2169222}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1009606329
 GameObject:
@@ -37423,135 +37336,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009606329}
   m_Mesh: {fileID: 1440041962}
---- !u!1 &1013144382
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1013144383}
-  - component: {fileID: 1013144386}
-  - component: {fileID: 1013144385}
-  - component: {fileID: 1013144384}
-  - component: {fileID: 1013144387}
-  m_Layer: 0
-  m_Name: mushroomInteractTrigger1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1013144383
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013144382}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2873383, y: 48.02527, z: -25.880981}
-  m_LocalScale: {x: 3.2700002, y: 3.9900002, z: 2.9800003}
-  m_Children: []
-  m_Father: {fileID: 1287635557}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1013144384
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013144382}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1013144385
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013144382}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1013144386
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013144382}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1013144387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013144382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0164aa81b2fd0274e8742272966a3665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guardianInteractTrigger: {fileID: 0}
-  miniGuardianTrigger: {fileID: 0}
-  labDoorTrigger: {fileID: 231966737}
-  interiorLabDoorTrigger: {fileID: 0}
-  gardenDoorTrigger: {fileID: 0}
-  endingTrigger: {fileID: 0}
-  interiorLabDoor: {fileID: 0}
-  mainLabDoorL: {fileID: 0}
-  mainLabDoorR: {fileID: 0}
-  gardenDoor: {fileID: 0}
-  mazeDoor: {fileID: 0}
-  mushroomTrigger1: {fileID: 1013144382}
-  mushroomTrigger2: {fileID: 0}
-  mushroomTrigger3: {fileID: 0}
-  mushroomTrigger4: {fileID: 0}
-  mushroomTrigger5: {fileID: 0}
-  mushroom1: {fileID: 977788639}
-  mushroom2: {fileID: 0}
-  mushroom3: {fileID: 0}
-  mushroom4: {fileID: 0}
-  mushroom5: {fileID: 0}
-  audio: {fileID: 1317985352}
-  thePlayer: {fileID: 1816455746}
-  interactText: {fileID: 406836730}
 --- !u!1 &1015837541
 GameObject:
   m_ObjectHideFlags: 0
@@ -38425,7 +38209,7 @@ Transform:
   - {fileID: 975451785}
   - {fileID: 1627167358}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1046486896
 Mesh:
@@ -38433,7 +38217,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh271128
+  m_Name: pb_Mesh23292
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38792,7 +38576,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270628
+  m_Name: pb_Mesh22788
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39736,7 +39520,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh271902
+  m_Name: pb_Mesh24054
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39905,6 +39689,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_2
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Mushroom
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39913,7 +39702,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -38.63315
+      value: -38.573
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
@@ -40062,7 +39851,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270238
+  m_Name: pb_Mesh22396
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40260,7 +40049,7 @@ Transform:
   - {fileID: 197679533}
   - {fileID: 1736245862}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1123833080 stripped
 GameObject:
@@ -41147,7 +40936,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh271676
+  m_Name: pb_Mesh23840
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -41598,6 +41387,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_3
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Mushroom
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41917,7 +41711,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1219441510 stripped
 GameObject:
@@ -42910,6 +42704,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_4
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Mushroom
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43584,7 +43383,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh271110
+  m_Name: pb_Mesh23274
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -43771,135 +43570,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 602622743572596502, guid: 0933e70225592f945a222875135b16cb, type: 3}
---- !u!1 &1280219880
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1280219881}
-  - component: {fileID: 1280219885}
-  - component: {fileID: 1280219884}
-  - component: {fileID: 1280219883}
-  - component: {fileID: 1280219882}
-  m_Layer: 0
-  m_Name: mushroomInteractTrigger4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1280219881
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280219880}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 103.185776, y: 5.9627686, z: -26.849731}
-  m_LocalScale: {x: 1, y: 3, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1287635557}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1280219882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280219880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0164aa81b2fd0274e8742272966a3665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guardianInteractTrigger: {fileID: 0}
-  miniGuardianTrigger: {fileID: 0}
-  labDoorTrigger: {fileID: 231966737}
-  interiorLabDoorTrigger: {fileID: 0}
-  gardenDoorTrigger: {fileID: 0}
-  endingTrigger: {fileID: 0}
-  interiorLabDoor: {fileID: 0}
-  mainLabDoorL: {fileID: 0}
-  mainLabDoorR: {fileID: 0}
-  gardenDoor: {fileID: 0}
-  mazeDoor: {fileID: 0}
-  mushroomTrigger1: {fileID: 0}
-  mushroomTrigger2: {fileID: 0}
-  mushroomTrigger3: {fileID: 0}
-  mushroomTrigger4: {fileID: 1280219880}
-  mushroomTrigger5: {fileID: 0}
-  mushroom1: {fileID: 0}
-  mushroom2: {fileID: 0}
-  mushroom3: {fileID: 0}
-  mushroom4: {fileID: 955919844}
-  mushroom5: {fileID: 0}
-  audio: {fileID: 1317985352}
-  thePlayer: {fileID: 1816455746}
-  interactText: {fileID: 406836730}
---- !u!65 &1280219883
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280219880}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1280219884
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280219880}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1280219885
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280219880}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1282556583
 GameObject:
   m_ObjectHideFlags: 0
@@ -44017,41 +43687,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 5452052704678615334, guid: e140b5e827151f74ca298ba469b40799, type: 3}
---- !u!1 &1287635556
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1287635557}
-  m_Layer: 0
-  m_Name: MushroomEvents
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1287635557
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287635556}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -98.04515, y: 455.97473, z: 2019.6779}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1013144383}
-  - {fileID: 1711820537}
-  - {fileID: 986621172}
-  - {fileID: 1280219881}
-  - {fileID: 233106871}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1296216166 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6932282163031943772, guid: e140b5e827151f74ca298ba469b40799,
@@ -44210,7 +43845,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-127658
+  m_Name: pb_Mesh22132
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -44492,7 +44127,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1318219159
 PrefabInstance:
@@ -44605,7 +44240,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270838
+  m_Name: pb_Mesh23010
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45688,7 +45323,7 @@ Transform:
   m_LocalScale: {x: 4.46, y: 5.26, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1364228127 stripped
 GameObject:
@@ -45888,7 +45523,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh272492
+  m_Name: pb_Mesh24658
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46165,8 +45800,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.50413644, y: 1, z: 1}
+  m_Center: {x: -0.24793181, y: 0, z: 0}
 --- !u!23 &1383344329
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46225,7 +45860,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1383344332
 MonoBehaviour:
@@ -47204,7 +46839,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh271314
+  m_Name: pb_Mesh23474
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47373,7 +47008,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270400
+  m_Name: pb_Mesh22560
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47536,7 +47171,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh271074
+  m_Name: pb_Mesh23238
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47953,7 +47588,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh272272
+  m_Name: pb_Mesh24438
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49033,7 +48668,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh271864
+  m_Name: pb_Mesh24016
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49196,7 +48831,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh269804
+  m_Name: pb_Mesh21948
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49549,7 +49184,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1543447739 stripped
 GameObject:
@@ -49926,7 +49561,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23606
+  m_Name: pb_Mesh23602
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -55862,7 +55497,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh269896
+  m_Name: pb_Mesh22042
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -57169,136 +56804,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -4927832148328429009, guid: fd1ee33d03b712d4b83275b8b044fc9b, type: 3}
---- !u!1 &1711820536
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1711820537}
-  - component: {fileID: 1711820541}
-  - component: {fileID: 1711820540}
-  - component: {fileID: 1711820539}
-  - component: {fileID: 1711820538}
-  m_Layer: 0
-  m_Name: mushroomInteractTrigger2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1711820537
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711820536}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 140.85765, y: -37.44348, z: -25.959106}
-  m_LocalScale: {x: 3.5, y: 3.47, z: 3.5}
-  m_Children: []
-  m_Father: {fileID: 1287635557}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1711820538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711820536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0164aa81b2fd0274e8742272966a3665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guardianInteractTrigger: {fileID: 0}
-  miniGuardianTrigger: {fileID: 0}
-  labDoorTrigger: {fileID: 231966737}
-  interiorLabDoorTrigger: {fileID: 0}
-  gardenDoorTrigger: {fileID: 0}
-  endingTrigger: {fileID: 0}
-  interiorLabDoor: {fileID: 0}
-  mainLabDoorL: {fileID: 0}
-  mainLabDoorR: {fileID: 0}
-  gardenDoor: {fileID: 0}
-  mazeDoor: {fileID: 0}
-  mushroomTrigger1: {fileID: 0}
-  mushroomTrigger2: {fileID: 1711820536}
-  mushroomTrigger3: {fileID: 0}
-  mushroomTrigger4: {fileID: 0}
-  mushroomTrigger5: {fileID: 0}
-  mushroom1: {fileID: 0}
-  mushroom2: {fileID: 1722165703}
-  mushroom3: {fileID: 0}
-  mushroom4: {fileID: 0}
-  mushroom5: {fileID: 0}
-  audio: {fileID: 1317985352}
-  thePlayer: {fileID: 1816455746}
-  interactText: {fileID: 406836730}
---- !u!136 &1711820539
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711820536}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!23 &1711820540
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711820536}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1711820541
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711820536}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1713870760
 GameObject:
   m_ObjectHideFlags: 0
@@ -57634,7 +57139,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270296
+  m_Name: pb_Mesh22456
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -57797,6 +57302,56 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1089821889}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1722165706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722165703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0164aa81b2fd0274e8742272966a3665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guardianInteractTrigger: {fileID: 0}
+  miniGuardianTrigger: {fileID: 0}
+  labDoorTrigger: {fileID: 231966737}
+  interiorLabDoorTrigger: {fileID: 0}
+  gardenDoorTrigger: {fileID: 0}
+  endingTrigger: {fileID: 0}
+  interiorLabDoor: {fileID: 0}
+  mainLabDoorL: {fileID: 0}
+  mainLabDoorR: {fileID: 0}
+  gardenDoor: {fileID: 0}
+  mazeDoor: {fileID: 0}
+  mushroomTrigger1: {fileID: 0}
+  mushroomTrigger2: {fileID: 0}
+  mushroomTrigger3: {fileID: 0}
+  mushroomTrigger4: {fileID: 0}
+  mushroomTrigger5: {fileID: 0}
+  mushroom1: {fileID: 0}
+  mushroom2: {fileID: 1722165703}
+  mushroom3: {fileID: 0}
+  mushroom4: {fileID: 0}
+  mushroom5: {fileID: 0}
+  audio: {fileID: 1317985352}
+  thePlayer: {fileID: 1816455746}
+  interactText: {fileID: 406836730}
+--- !u!64 &1722165707
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722165703}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 3555201137979064246, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f, type: 3}
 --- !u!1 &1723703650 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5442987000906794320, guid: 0933e70225592f945a222875135b16cb,
@@ -57843,7 +57398,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh272562
+  m_Name: pb_Mesh24728
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -58432,7 +57987,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh271566
+  m_Name: pb_Mesh23730
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -59506,7 +59061,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh272446
+  m_Name: pb_Mesh24612
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -60355,7 +59910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3fe4a253e651304c8ddba097afa25bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxInteractDistance: 2
+  maxInteractDistance: 3
   interactText: {fileID: 406836730}
 --- !u!1001 &1823359488
 PrefabInstance:
@@ -61067,7 +60622,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861209441 stripped
 GameObject:
@@ -61932,7 +61487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1957658174 stripped
 GameObject:
@@ -62757,7 +62312,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270218
+  m_Name: pb_Mesh22376
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -62947,7 +62502,7 @@ Transform:
   - {fileID: 1973402545}
   - {fileID: 427304121}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1968148148 stripped
 GameObject:
@@ -63215,7 +62770,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh272212
+  m_Name: pb_Mesh24376
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -63926,6 +63481,56 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1217009440}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2033962423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033962419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0164aa81b2fd0274e8742272966a3665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guardianInteractTrigger: {fileID: 0}
+  miniGuardianTrigger: {fileID: 0}
+  labDoorTrigger: {fileID: 231966737}
+  interiorLabDoorTrigger: {fileID: 0}
+  gardenDoorTrigger: {fileID: 0}
+  endingTrigger: {fileID: 0}
+  interiorLabDoor: {fileID: 0}
+  mainLabDoorL: {fileID: 0}
+  mainLabDoorR: {fileID: 0}
+  gardenDoor: {fileID: 0}
+  mazeDoor: {fileID: 0}
+  mushroomTrigger1: {fileID: 0}
+  mushroomTrigger2: {fileID: 0}
+  mushroomTrigger3: {fileID: 0}
+  mushroomTrigger4: {fileID: 0}
+  mushroomTrigger5: {fileID: 0}
+  mushroom1: {fileID: 0}
+  mushroom2: {fileID: 0}
+  mushroom3: {fileID: 2033962419}
+  mushroom4: {fileID: 0}
+  mushroom5: {fileID: 0}
+  audio: {fileID: 1317985352}
+  thePlayer: {fileID: 1816455746}
+  interactText: {fileID: 406836730}
+--- !u!64 &2033962424
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033962419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 3555201137979064246, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f, type: 3}
 --- !u!1 &2036169986 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1374233546949420825, guid: e140b5e827151f74ca298ba469b40799,
@@ -64509,7 +64114,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270820
+  m_Name: pb_Mesh22992
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -65116,7 +64721,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270792
+  m_Name: pb_Mesh22952
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -65425,7 +65030,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270444
+  m_Name: pb_Mesh22604
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -66876,7 +66481,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh270924
+  m_Name: pb_Mesh23084
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -67477,7 +67082,7 @@ PrefabInstance:
     - target: {fileID: 8195515413423298206, guid: 45caa10a0ce1c124d8898eee260708e7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 8195515413423298206, guid: 45caa10a0ce1c124d8898eee260708e7,
         type: 3}
