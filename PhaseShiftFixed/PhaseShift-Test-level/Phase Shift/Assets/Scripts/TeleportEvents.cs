@@ -39,6 +39,8 @@ public class TeleportEvents : MonoBehaviour
     public bool teleportTriggerBool5 = false;
     public bool teleportTriggerBool6 = false;
 
+    private bool canTeleport = false;
+
 	private void Start()
 	{
 		flash.enabled = false;
@@ -46,6 +48,7 @@ public class TeleportEvents : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
     {
+        canTeleport = true;
         if (gameObject == teleportTrigger1)
         {
             interactText.text = "[ press F to Dimensional Travel ]";
@@ -85,50 +88,59 @@ public class TeleportEvents : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         interactText.text = "";
+        canTeleport = false;
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (Input.GetButtonDown("Interact"))
-        {
-            //Teleport();
+        canTeleport = true;        
+    }
 
-            if (gameObject == teleportTrigger1)
-            {
-                teleportSound.Play();
-                StartCoroutine(Flash());
-                Teleport();
-            }
-            else if (gameObject == teleportTrigger2)
-            {
-                teleportSound.Play();
-                StartCoroutine(Flash());
-                Teleport();
-            }
-            else if (gameObject == teleportTrigger3)
-            {
-				teleportSound.PlayOneShot(woodDoor, 1);
-                //StartCoroutine(Flash());
-                Teleport();
-            }
-            else if (gameObject == teleportTrigger4)
-            {
-				teleportSound.PlayOneShot(woodDoor, 1);
-				//StartCoroutine(Flash());
-				Teleport();
-            }
-            else if (gameObject == teleportTrigger5)
-            {
-                teleportSound.Play();
-                StartCoroutine(Flash());
-                Teleport();
-            }
-            else if (gameObject == teleportTrigger6)
-            {
-                teleportSound.Play();
-                StartCoroutine(Flash());
-                Teleport();
-            }
+    private void Update()
+    {
+        if (Input.GetButtonDown("Interact") && canTeleport)
+        {
+            EnableTeleportation();
+        }
+    }
+
+    private void EnableTeleportation()
+    {
+        if (gameObject == teleportTrigger1)
+        {
+            teleportSound.Play();
+            StartCoroutine(Flash());
+            Teleport();
+        }
+        else if (gameObject == teleportTrigger2)
+        {
+            teleportSound.Play();
+            StartCoroutine(Flash());
+            Teleport();
+        }
+        else if (gameObject == teleportTrigger3)
+        {
+            teleportSound.PlayOneShot(woodDoor, 1);
+            //StartCoroutine(Flash());
+            Teleport();
+        }
+        else if (gameObject == teleportTrigger4)
+        {
+            teleportSound.PlayOneShot(woodDoor, 1);
+            //StartCoroutine(Flash());
+            Teleport();
+        }
+        else if (gameObject == teleportTrigger5)
+        {
+            teleportSound.Play();
+            StartCoroutine(Flash());
+            Teleport();
+        }
+        else if (gameObject == teleportTrigger6)
+        {
+            teleportSound.Play();
+            StartCoroutine(Flash());
+            Teleport();
         }
     }
 
