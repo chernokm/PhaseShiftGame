@@ -88,7 +88,7 @@ public class ItemEvents : MonoBehaviour
 
     public void ShowUIPrompt()
     {
-        interactText.text = "[ Press F to pick up the mushroom ]";
+        interactText.text = "[ Press F to pick up ]";
     }
 
     private void OnTriggerExit(Collider other)

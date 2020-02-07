@@ -57,7 +57,7 @@ public class PlayerRaycastInteract : MonoBehaviour
             switch (hit.collider.transform.tag) // What the ray is hitting. ie, what the player is looking at within Interact distance. This is tag based.
             {                
                 case "Interact": // If the object's tag is "Interact"
-                case "Mushroom": // Or mushroom
+                case "Pickup": // Or mushroom
                     AssignInteractiveObject(hit);                    
                     break;
             }
@@ -108,7 +108,7 @@ public class PlayerRaycastInteract : MonoBehaviour
                 interactObject = hit.collider.gameObject.GetComponent<DoorEvents>(); // When the ray catches an interactive object, the unassigned DoorEvents var of this class gets assigned to that object. This only happens one frame when the player focuses on an object.
                 interactObject.ShowUIText();
                 break;
-            case "Mushroom":
+            case "Pickup":
                 itemEvent = hit.collider.gameObject.GetComponent<ItemEvents>();
                 itemEvent.ShowUIPrompt();
                 break;

@@ -1885,7 +1885,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Name
-      value: FPSController
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_IsActive
@@ -1894,6 +1894,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1962,6 +1966,10 @@ PrefabInstance:
     - target: {fileID: 8200000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Volume
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Height
@@ -8972,7 +8980,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
       propertyPath: m_TagString
-      value: Mushroom
+      value: Pickup
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
@@ -11267,7 +11275,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
       propertyPath: m_TagString
-      value: Mushroom
+      value: Pickup
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
@@ -33731,7 +33739,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
       propertyPath: m_TagString
-      value: Mushroom
+      value: Pickup
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
@@ -35677,7 +35685,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
       propertyPath: m_TagString
-      value: Mushroom
+      value: Pickup
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 575d99b81a9fc7b4d9b8d5d2372f5a0f,
         type: 3}
@@ -49137,7 +49145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3fe4a253e651304c8ddba097afa25bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxInteractDistance: 2
+  maxInteractDistance: 3
   interactText: {fileID: 7728793724725410581}
 --- !u!43 &1821590059
 Mesh:
