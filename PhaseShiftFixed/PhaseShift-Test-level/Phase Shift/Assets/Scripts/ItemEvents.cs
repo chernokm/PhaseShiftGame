@@ -86,6 +86,11 @@ public class ItemEvents : MonoBehaviour
         }
     }
 
+    public void ShowUIPrompt()
+    {
+        interactText.text = "[ Press F to pick up the mushroom ]";
+    }
+
     private void OnTriggerExit(Collider other)
     {
         interactText.text = "";
@@ -145,7 +150,7 @@ public class ItemEvents : MonoBehaviour
 
     public void Pickup()
     {
-        if (gameObject == mushroomTrigger1)
+        if (gameObject == mushroom1)
         {
 			audio.Play();
             Destroy(mushroom1);
@@ -153,7 +158,7 @@ public class ItemEvents : MonoBehaviour
             Destroy(mushroomTrigger1);
             mushroomAmount += 1;
         }
-        else if (gameObject == mushroomTrigger2)
+        else if (gameObject == mushroom2)
         {
 			audio.Play();
 			Destroy(mushroom2);
@@ -161,7 +166,7 @@ public class ItemEvents : MonoBehaviour
             Destroy(mushroomTrigger2);
             mushroomAmount += 1;
         }
-        else if (gameObject == mushroomTrigger3)
+        else if (gameObject == mushroom3)
         {
 			audio.Play();
 			Destroy(mushroom3);
@@ -169,7 +174,7 @@ public class ItemEvents : MonoBehaviour
             Destroy(mushroomTrigger3);
             mushroomAmount += 1;
         }
-        else if (gameObject == mushroomTrigger4)
+        else if (gameObject == mushroom4)
         {
 			audio.Play();
 			Destroy(mushroom4);
@@ -177,7 +182,7 @@ public class ItemEvents : MonoBehaviour
             Destroy(mushroomTrigger4);
             mushroomAmount += 1;
         }
-        else if (gameObject == mushroomTrigger5)
+        else if (gameObject == mushroom5)
         {
 			audio.Play();
 			Destroy(mushroom5);
