@@ -61,8 +61,12 @@ public class ItemEvents : MonoBehaviour
     public static bool obtainedGardenKeycard = false;
     public static bool obtainedInteriorLabKeycard = false;
 
+    private void Start()
+    {
+        this.tag = "Pickup";
+    }
 
-	void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
 		if (gameObject == mushroomTrigger1)
         {
