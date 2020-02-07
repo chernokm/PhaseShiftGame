@@ -85,6 +85,6 @@ public class MissionSelector : MonoBehaviour
 		teleporterLight.SetActive(true);
 		teleporterParticles.SetActive(true);
 		teleporterTrigger.SetActive(true);
-
+		CloseMenu();
 	}
 }
