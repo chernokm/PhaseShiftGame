@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Interact
   - Mushroom
+  - Pickup
+  - Mission Select
   layers:
   - Default
   - TransparentFX

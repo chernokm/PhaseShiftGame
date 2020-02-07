@@ -13,6 +13,7 @@ public class PlayerRaycastInteract : MonoBehaviour
 
     private DoorEvents interactObject;
     private ItemEvents itemEvent;
+    private MissionSelector missionSelect;
     private Camera mainCamera;
 
     // Start is called before the first frame update
@@ -57,7 +58,8 @@ public class PlayerRaycastInteract : MonoBehaviour
             switch (hit.collider.transform.tag) // What the ray is hitting. ie, what the player is looking at within Interact distance. This is tag based.
             {                
                 case "Interact": // If the object's tag is "Interact"
-                case "Mushroom": // Or mushroom
+                case "Mission Select":
+                case "Pickup": // Or mushroom
                     AssignInteractiveObject(hit);                    
                     break;
             }
@@ -69,6 +71,7 @@ public class PlayerRaycastInteract : MonoBehaviour
         interactText.text = "";
         interactObject = null;
         itemEvent = null;
+        missionSelect = null;
     }
 
     private void EnableAndDisableUIPrompt(Ray ray)
@@ -83,6 +86,10 @@ public class PlayerRaycastInteract : MonoBehaviour
             else if (itemEvent)
             {
                 itemEvent.Pickup();
+            }
+            else if (missionSelect)
+            {
+                missionSelect.OpenMenu();
             }
         }
 
@@ -108,9 +115,13 @@ public class PlayerRaycastInteract : MonoBehaviour
                 interactObject = hit.collider.gameObject.GetComponent<DoorEvents>(); // When the ray catches an interactive object, the unassigned DoorEvents var of this class gets assigned to that object. This only happens one frame when the player focuses on an object.
                 interactObject.ShowUIText();
                 break;
-            case "Mushroom":
+            case "Pickup":
                 itemEvent = hit.collider.gameObject.GetComponent<ItemEvents>();
                 itemEvent.ShowUIPrompt();
+                break;
+            case "Mission Select":
+                missionSelect = hit.collider.gameObject.GetComponent<MissionSelector>();
+                missionSelect.ShowUIPrompt();
                 break;
         }        
     }

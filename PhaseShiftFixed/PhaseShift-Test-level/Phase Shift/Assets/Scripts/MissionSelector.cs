@@ -37,9 +37,10 @@ public class MissionSelector : MonoBehaviour
 		teleporterLight.SetActive(false);
 		teleporterParticles.SetActive(false);
 		teleporterTrigger.SetActive(false);
+		this.tag = "Mission Select";
 	}
 
-	private void OnTriggerEnter(Collider other)
+	public void ShowUIPrompt()
 	{
 		interactionText.text = "Press [F] to access missions";
 	}
@@ -57,7 +58,7 @@ public class MissionSelector : MonoBehaviour
 		interactionText.text = "";
 	}
 
-	private void OpenMenu()
+	public void OpenMenu()
 	{
 		fpsController.enabled = false;
 		Cursor.visible = true;

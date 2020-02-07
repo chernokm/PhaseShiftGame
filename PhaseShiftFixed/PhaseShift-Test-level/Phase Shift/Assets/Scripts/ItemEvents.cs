@@ -61,8 +61,12 @@ public class ItemEvents : MonoBehaviour
     public static bool obtainedGardenKeycard = false;
     public static bool obtainedInteriorLabKeycard = false;
 
+    private void Start()
+    {
+        this.tag = "Pickup";
+    }
 
-	void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
 		if (gameObject == mushroomTrigger1)
         {
@@ -88,7 +92,7 @@ public class ItemEvents : MonoBehaviour
 
     public void ShowUIPrompt()
     {
-        interactText.text = "[ Press F to pick up the mushroom ]";
+        interactText.text = "[ Press F to pick up ]";
     }
 
     private void OnTriggerExit(Collider other)
