@@ -6,17 +6,6 @@ using UnityEngine.UI;
 
 public class ResourceDump : MonoBehaviour
 {
-	#region mushroom Objects
-	[SerializeField]
-	private GameObject Mushroom1;
-	[SerializeField]
-	private GameObject Mushroom2;
-	[SerializeField]
-	private GameObject Mushroom3;
-	[SerializeField]
-	private GameObject Mushroom4;
-	#endregion
-
 	[SerializeField]
 	private Text interactionText;
 	[SerializeField]
@@ -29,10 +18,6 @@ public class ResourceDump : MonoBehaviour
 
 	private void Start()
 	{
-		Mushroom1.SetActive(false);
-		Mushroom2.SetActive(false);
-		Mushroom3.SetActive(false);
-		Mushroom4.SetActive(false);
 		depositText.SetActive(false);
 	}
 
@@ -81,10 +66,6 @@ public class ResourceDump : MonoBehaviour
 
 	private void Finish()
 	{
-		Mushroom1.SetActive(true);
-		Mushroom2.SetActive(true);
-		Mushroom3.SetActive(true);
-		Mushroom4.SetActive(true);
 		primaryObjective.SetActive(false);
 		SceneManager.LoadScene(2);
 	}
