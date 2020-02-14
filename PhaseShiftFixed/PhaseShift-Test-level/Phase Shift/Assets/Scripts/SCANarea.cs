@@ -32,29 +32,40 @@ public class SCANarea : MonoBehaviour
 	#endregion
 
 	[SerializeField]
+	private GameObject scanDevice;
+	[SerializeField]
+	private TextMesh remainingSamplesText;
+
+	[SerializeField]
 	private Text scanDeviceDisplay;
 
 	private void OnTriggerEnter(Collider other)
 	{
 		if (isInCourtyard == true && isInMaze == false && isInForest == false && isInLabHUB == false && isInTemple == false)
 		{
+			scanDevice.SetActive(true);
 			scanDeviceDisplay.text = "Courtyard";
+			remainingSamplesText.text = "0";
 		}
 		else if (isInCourtyard == false && isInMaze == true && isInForest == false && isInLabHUB == false && isInTemple == false)
 		{
 			scanDeviceDisplay.text = "Hedge Maze";
+			remainingSamplesText.text = "2";
 		}
 		else if (isInCourtyard == false && isInMaze == false && isInForest == true && isInLabHUB == false && isInTemple == false)
 		{
 			scanDeviceDisplay.text = "Forest";
+			remainingSamplesText.text = "1";
 		}
 		else if (isInCourtyard == false && isInMaze == false && isInForest == false && isInLabHUB == true && isInTemple == false)
 		{
+			scanDevice.SetActive(false);
 			scanDeviceDisplay.text = "Lab HUB";
 		}
 		else if (isInCourtyard == false && isInMaze == false && isInForest == false && isInLabHUB == false && isInTemple == true)
 		{
 			scanDeviceDisplay.text = "Temple";
+			remainingSamplesText.text = "1";
 		}
 	}
 }
