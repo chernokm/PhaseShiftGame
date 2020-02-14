@@ -24,8 +24,8 @@ public class MissionSelector : MonoBehaviour
 	private GameObject primaryObjective;
 	[SerializeField]
 	private Text interactionText;
-	[SerializeField]
-	private Text missionResponse;
+	//[SerializeField]
+	//private Text missionResponse;
 	#endregion
 
 	public FirstPersonController fpsController;
@@ -81,7 +81,7 @@ public class MissionSelector : MonoBehaviour
 
 	public void ChooseMission()
 	{
-		missionResponse.text = "Mission selected - Teleporter active" + "\n" + "Collect 4 Zetamelaphin Mushrooms";
+		//missionResponse.text = "Mission selected - Teleporter active" + "\n" + "Collect 4 Zetamelaphin Mushrooms";
 		primaryObjective.SetActive(true);
 		teleporterLight.SetActive(true);
 		teleporterParticles.SetActive(true);
