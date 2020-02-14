@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 14300000}
   - component: {fileID: 11400000}
   - component: {fileID: 5400000}
+  - component: {fileID: 6579692602107303846}
   - component: {fileID: 8200000}
   m_Layer: 0
   m_Name: FPSController
@@ -193,6 +194,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6579692602107303846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e85a33fe7417501479b4e29e00593366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 0
